@@ -521,3 +521,357 @@
 
 [2021-06-20 12:47:32,898 INFO capitalgains - prepare_final_data:] File: data\output\output_mf_transactions.csv written to disk
 
+[2021-06-20 12:49:55,903 INFO parsedata - _read_data_from_file:] File data\consol_trans_18_June_2021.txt sucessfully read, found 505 records
+
+[2021-06-20 12:49:55,904 DEBUG parsedata - parse_mf_data:] Parsing data for MF DSP Small Cap Fund-Direct Plan-Growth
+[2021-06-20 12:49:55,905 DEBUG parsedata - parse_mf_data:] Latest Nav:98.222, Nav Date:98.222
+[2021-06-20 12:49:55,905 DEBUG parsedata - parse_mf_data:] Parsing data for MF Franklin India Flexi Cap Fund-Direct-Growth
+[2021-06-20 12:49:55,907 DEBUG parsedata - parse_mf_data:] Latest Nav:903.5355, Nav Date:903.5355
+[2021-06-20 12:49:55,907 DEBUG parsedata - parse_mf_data:] Parsing data for MF Franklin India Smaller Companies Fund-Direct-Growth
+[2021-06-20 12:49:55,908 DEBUG parsedata - parse_mf_data:] Latest Nav:83.3396, Nav Date:83.3396
+[2021-06-20 12:49:55,908 DEBUG parsedata - parse_mf_data:] Parsing data for MF Franklin India Ultra Short Bond Fund Super Institutional Plan-Direct-Growth
+[2021-06-20 12:49:55,908 DEBUG parsedata - parse_mf_data:] Latest Nav:30.2922, Nav Date:30.2922
+[2021-06-20 12:49:55,908 DEBUG parsedata - parse_mf_data:] Parsing data for MF Franklin India Low Duration Fund-Direct-Growth
+[2021-06-20 12:49:55,909 DEBUG parsedata - parse_mf_data:] Latest Nav:24.2658, Nav Date:24.2658
+[2021-06-20 12:49:55,909 DEBUG parsedata - parse_mf_data:] Parsing data for MF Franklin India Low Duration Fund-Segregated Portfolio 2 )-Growth
+[2021-06-20 12:49:55,909 DEBUG parsedata - parse_mf_data:] Latest Nav:0.0, MF SchemeFranklin India Low Duration Fund-Segregated Portfolio 2 )-Growth will be ignored
+[2021-06-20 12:49:55,909 DEBUG parsedata - parse_mf_data:] Parsing data for MF HDFC Top 100 Fund-Direct Plan-Growth Option
+[2021-06-20 12:49:55,909 DEBUG parsedata - parse_mf_data:] Latest Nav:661.419, Nav Date:661.419
+[2021-06-20 12:49:55,910 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential All Seasons Bond Fund-Direct Plan-Growth
+[2021-06-20 12:49:55,910 DEBUG parsedata - parse_mf_data:] Latest Nav:29.7814, Nav Date:29.7814
+[2021-06-20 12:49:55,910 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential Banking and PSU Debt Fund-Direct Plan-Growth
+[2021-06-20 12:49:55,910 DEBUG parsedata - parse_mf_data:] Latest Nav:26.0015, Nav Date:26.0015
+[2021-06-20 12:49:55,910 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential Long Term Equity Fund-Direct Plan-Growth
+[2021-06-20 12:49:55,910 DEBUG parsedata - parse_mf_data:] Latest Nav:562.58, Nav Date:562.58
+[2021-06-20 12:49:55,910 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential Nifty Next 50 Index Fund-Direct Plan-Growth
+[2021-06-20 12:49:55,911 DEBUG parsedata - parse_mf_data:] Latest Nav:35.1068, Nav Date:35.1068
+[2021-06-20 12:49:55,912 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential US Bluechip Equity Fund-Direct Plan-Growth
+[2021-06-20 12:49:55,912 DEBUG parsedata - parse_mf_data:] Latest Nav:47.99, Nav Date:47.99
+[2021-06-20 12:49:55,912 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential Value Discovery Fund-Direct Plan-Growth
+[2021-06-20 12:49:55,914 DEBUG parsedata - parse_mf_data:] Latest Nav:230.32, Nav Date:230.32
+[2021-06-20 12:49:55,914 DEBUG parsedata - parse_mf_data:] Parsing data for MF Mirae Asset Emerging Bluechip Fund-Direct Plan-Growth
+[2021-06-20 12:49:55,915 DEBUG parsedata - parse_mf_data:] Latest Nav:93.405, Nav Date:93.405
+[2021-06-20 12:49:55,916 DEBUG parsedata - parse_mf_data:] Parsing data for MF Mirae Asset Large Cap Fund-Direct Plan-Growth
+[2021-06-20 12:49:55,916 DEBUG parsedata - parse_mf_data:] Latest Nav:76.139, Nav Date:76.139
+[2021-06-20 12:49:55,916 DEBUG parsedata - parse_mf_data:] Parsing data for MF Mirae Asset Tax Saver Fund-Direct Growth
+[2021-06-20 12:49:55,916 DEBUG parsedata - parse_mf_data:] Latest Nav:30.121, Nav Date:30.121
+[2021-06-20 12:49:55,918 DEBUG parsedata - parse_mf_data:] Number of Mutual Funds Scheme: 15
+
+[2021-06-20 12:49:56,022 DEBUG capitalgains - _set_gf_nav:] Setting Grandfathered NAV for all Schemes for NAV date 18-JAN-2018
+[2021-06-20 12:49:56,048 WARNING capitalgains - _set_gf_nav:] Schemes below  are removed as  Grandfathered NAV was not Found
+[2021-06-20 12:49:56,049 WARNING capitalgains - _set_gf_nav:] Mirae Asset Tax Saver Fund-Direct Growth
+[2021-06-20 12:49:56,050 WARNING capitalgains - _set_gf_nav:] Franklin India Ultra Short Bond Fund Super Institutional Plan-Direct-Growth
+[2021-06-20 12:49:56,050 WARNING capitalgains - _set_gf_nav:] ICICI Prudential Long Term Equity Fund-Direct Plan-Growth
+[2021-06-20 12:49:56,054 INFO capitalgains - _calculate_capital_gains:] No Missing data Found:
+[2021-06-20 12:49:56,163 INFO capitalgains - calc_units_to_sell:] For Scheme DSP Small Cap Fund-Direct Plan-Growth: Sell 3563.92 units for LTCG of 100000.0
+[2021-06-20 12:49:56,170 INFO capitalgains - calc_units_to_sell:] For Scheme Franklin India Flexi Cap Fund-Direct-Growth: Sell 376.05 units for LTCG of 100000.0
+[2021-06-20 12:49:56,172 INFO capitalgains - calc_units_to_sell:] For Scheme Franklin India Smaller Companies Fund-Direct-Growth: Sell 5582.73 units for LTCG of 100000.0
+[2021-06-20 12:49:56,175 INFO capitalgains - calc_units_to_sell:] For Scheme Franklin India Low Duration Fund-Direct-Growth Total LTCG 68423.93 is less than target LTCG 100000: Sell 15952.61 units for LTCG of 68423.93
+[2021-06-20 12:49:56,177 INFO capitalgains - calc_units_to_sell:] For Scheme HDFC Top 100 Fund-Direct Plan-Growth Option: Sell 612.03 units for LTCG of 100000.0
+[2021-06-20 12:49:56,180 INFO capitalgains - calc_units_to_sell:] For Scheme ICICI Prudential All Seasons Bond Fund-Direct Plan-Growth: Sell 12587.17 units for LTCG of 100000.0
+[2021-06-20 12:49:56,183 INFO capitalgains - calc_units_to_sell:] For Scheme ICICI Prudential Banking and PSU Debt Fund-Direct Plan-Growth: Sell 16322.26 units for LTCG of 100000.0
+[2021-06-20 12:49:56,187 INFO capitalgains - calc_units_to_sell:] For Scheme ICICI Prudential Nifty Next 50 Index Fund-Direct Plan-Growth: Sell 11887.39 units for LTCG of 100000.0
+[2021-06-20 12:49:56,189 INFO capitalgains - calc_units_to_sell:] For Scheme ICICI Prudential US Bluechip Equity Fund-Direct Plan-Growth No LTCG exists hence calculation is not applicable
+[2021-06-20 12:49:56,194 INFO capitalgains - calc_units_to_sell:] For Scheme ICICI Prudential Value Discovery Fund-Direct Plan-Growth: Sell 1375.89 units for LTCG of 100000.0
+[2021-06-20 12:49:56,198 INFO capitalgains - calc_units_to_sell:] For Scheme Mirae Asset Emerging Bluechip Fund-Direct Plan-Growth: Sell 2639.81 units for LTCG of 100000.0
+[2021-06-20 12:49:56,202 INFO capitalgains - calc_units_to_sell:] For Scheme Mirae Asset Large Cap Fund-Direct Plan-Growth: Sell 3689.22 units for LTCG of 100000.0
+[2021-06-20 12:49:56,235 INFO capitalgains - prepare_final_data:] File: data\output\output_mf_totals.csv written to disk
+
+[2021-06-20 12:49:56,242 INFO capitalgains - prepare_final_data:] File: data\output\output_mf_transactions.csv written to disk
+
+[2021-06-20 13:56:28,620 INFO parsedata - _read_data_from_file:] File data\consol_trans_18_June_2021.txt sucessfully read, found 505 records
+
+[2021-06-20 13:56:28,620 INFO parsedata - _read_data_from_file:] File data\consol_trans_18_June_2021.txt sucessfully read, found 505 records
+
+[2021-06-20 13:56:28,621 DEBUG parsedata - parse_mf_data:] Parsing data for MF DSP Small Cap Fund-Direct Plan-Growth
+[2021-06-20 13:56:28,621 DEBUG parsedata - parse_mf_data:] Parsing data for MF DSP Small Cap Fund-Direct Plan-Growth
+[2021-06-20 13:56:28,622 DEBUG parsedata - parse_mf_data:] Latest Nav:98.222, Nav Date:98.222
+[2021-06-20 13:56:28,622 DEBUG parsedata - parse_mf_data:] Latest Nav:98.222, Nav Date:98.222
+[2021-06-20 13:56:28,622 DEBUG parsedata - parse_mf_data:] Parsing data for MF Franklin India Flexi Cap Fund-Direct-Growth
+[2021-06-20 13:56:28,622 DEBUG parsedata - parse_mf_data:] Parsing data for MF Franklin India Flexi Cap Fund-Direct-Growth
+[2021-06-20 13:56:28,624 DEBUG parsedata - parse_mf_data:] Latest Nav:903.5355, Nav Date:903.5355
+[2021-06-20 13:56:28,624 DEBUG parsedata - parse_mf_data:] Latest Nav:903.5355, Nav Date:903.5355
+[2021-06-20 13:56:28,624 DEBUG parsedata - parse_mf_data:] Parsing data for MF Franklin India Smaller Companies Fund-Direct-Growth
+[2021-06-20 13:56:28,624 DEBUG parsedata - parse_mf_data:] Parsing data for MF Franklin India Smaller Companies Fund-Direct-Growth
+[2021-06-20 13:56:28,625 DEBUG parsedata - parse_mf_data:] Latest Nav:83.3396, Nav Date:83.3396
+[2021-06-20 13:56:28,625 DEBUG parsedata - parse_mf_data:] Latest Nav:83.3396, Nav Date:83.3396
+[2021-06-20 13:56:28,625 DEBUG parsedata - parse_mf_data:] Parsing data for MF Franklin India Ultra Short Bond Fund Super Institutional Plan-Direct-Growth
+[2021-06-20 13:56:28,625 DEBUG parsedata - parse_mf_data:] Parsing data for MF Franklin India Ultra Short Bond Fund Super Institutional Plan-Direct-Growth
+[2021-06-20 13:56:28,625 DEBUG parsedata - parse_mf_data:] Latest Nav:30.2922, Nav Date:30.2922
+[2021-06-20 13:56:28,625 DEBUG parsedata - parse_mf_data:] Latest Nav:30.2922, Nav Date:30.2922
+[2021-06-20 13:56:28,625 DEBUG parsedata - parse_mf_data:] Parsing data for MF Franklin India Low Duration Fund-Direct-Growth
+[2021-06-20 13:56:28,625 DEBUG parsedata - parse_mf_data:] Parsing data for MF Franklin India Low Duration Fund-Direct-Growth
+[2021-06-20 13:56:28,625 DEBUG parsedata - parse_mf_data:] Latest Nav:24.2658, Nav Date:24.2658
+[2021-06-20 13:56:28,625 DEBUG parsedata - parse_mf_data:] Latest Nav:24.2658, Nav Date:24.2658
+[2021-06-20 13:56:28,626 DEBUG parsedata - parse_mf_data:] Parsing data for MF Franklin India Low Duration Fund-Segregated Portfolio 2 )-Growth
+[2021-06-20 13:56:28,626 DEBUG parsedata - parse_mf_data:] Parsing data for MF Franklin India Low Duration Fund-Segregated Portfolio 2 )-Growth
+[2021-06-20 13:56:28,626 DEBUG parsedata - parse_mf_data:] Latest Nav:0.0, MF SchemeFranklin India Low Duration Fund-Segregated Portfolio 2 )-Growth will be ignored
+[2021-06-20 13:56:28,626 DEBUG parsedata - parse_mf_data:] Latest Nav:0.0, MF SchemeFranklin India Low Duration Fund-Segregated Portfolio 2 )-Growth will be ignored
+[2021-06-20 13:56:28,626 DEBUG parsedata - parse_mf_data:] Parsing data for MF HDFC Top 100 Fund-Direct Plan-Growth Option
+[2021-06-20 13:56:28,626 DEBUG parsedata - parse_mf_data:] Parsing data for MF HDFC Top 100 Fund-Direct Plan-Growth Option
+[2021-06-20 13:56:28,626 DEBUG parsedata - parse_mf_data:] Latest Nav:661.419, Nav Date:661.419
+[2021-06-20 13:56:28,626 DEBUG parsedata - parse_mf_data:] Latest Nav:661.419, Nav Date:661.419
+[2021-06-20 13:56:28,627 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential All Seasons Bond Fund-Direct Plan-Growth
+[2021-06-20 13:56:28,627 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential All Seasons Bond Fund-Direct Plan-Growth
+[2021-06-20 13:56:28,627 DEBUG parsedata - parse_mf_data:] Latest Nav:29.7814, Nav Date:29.7814
+[2021-06-20 13:56:28,627 DEBUG parsedata - parse_mf_data:] Latest Nav:29.7814, Nav Date:29.7814
+[2021-06-20 13:56:28,627 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential Banking and PSU Debt Fund-Direct Plan-Growth
+[2021-06-20 13:56:28,627 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential Banking and PSU Debt Fund-Direct Plan-Growth
+[2021-06-20 13:56:28,627 DEBUG parsedata - parse_mf_data:] Latest Nav:26.0015, Nav Date:26.0015
+[2021-06-20 13:56:28,627 DEBUG parsedata - parse_mf_data:] Latest Nav:26.0015, Nav Date:26.0015
+[2021-06-20 13:56:28,628 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential Long Term Equity Fund-Direct Plan-Growth
+[2021-06-20 13:56:28,628 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential Long Term Equity Fund-Direct Plan-Growth
+[2021-06-20 13:56:28,628 DEBUG parsedata - parse_mf_data:] Latest Nav:562.58, Nav Date:562.58
+[2021-06-20 13:56:28,628 DEBUG parsedata - parse_mf_data:] Latest Nav:562.58, Nav Date:562.58
+[2021-06-20 13:56:28,628 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential Nifty Next 50 Index Fund-Direct Plan-Growth
+[2021-06-20 13:56:28,628 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential Nifty Next 50 Index Fund-Direct Plan-Growth
+[2021-06-20 13:56:28,629 DEBUG parsedata - parse_mf_data:] Latest Nav:35.1068, Nav Date:35.1068
+[2021-06-20 13:56:28,629 DEBUG parsedata - parse_mf_data:] Latest Nav:35.1068, Nav Date:35.1068
+[2021-06-20 13:56:28,629 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential US Bluechip Equity Fund-Direct Plan-Growth
+[2021-06-20 13:56:28,629 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential US Bluechip Equity Fund-Direct Plan-Growth
+[2021-06-20 13:56:28,630 DEBUG parsedata - parse_mf_data:] Latest Nav:47.99, Nav Date:47.99
+[2021-06-20 13:56:28,630 DEBUG parsedata - parse_mf_data:] Latest Nav:47.99, Nav Date:47.99
+[2021-06-20 13:56:28,630 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential Value Discovery Fund-Direct Plan-Growth
+[2021-06-20 13:56:28,630 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential Value Discovery Fund-Direct Plan-Growth
+[2021-06-20 13:56:28,631 DEBUG parsedata - parse_mf_data:] Latest Nav:230.32, Nav Date:230.32
+[2021-06-20 13:56:28,631 DEBUG parsedata - parse_mf_data:] Latest Nav:230.32, Nav Date:230.32
+[2021-06-20 13:56:28,632 DEBUG parsedata - parse_mf_data:] Parsing data for MF Mirae Asset Emerging Bluechip Fund-Direct Plan-Growth
+[2021-06-20 13:56:28,632 DEBUG parsedata - parse_mf_data:] Parsing data for MF Mirae Asset Emerging Bluechip Fund-Direct Plan-Growth
+[2021-06-20 13:56:28,633 DEBUG parsedata - parse_mf_data:] Latest Nav:93.405, Nav Date:93.405
+[2021-06-20 13:56:28,633 DEBUG parsedata - parse_mf_data:] Latest Nav:93.405, Nav Date:93.405
+[2021-06-20 13:56:28,633 DEBUG parsedata - parse_mf_data:] Parsing data for MF Mirae Asset Large Cap Fund-Direct Plan-Growth
+[2021-06-20 13:56:28,633 DEBUG parsedata - parse_mf_data:] Parsing data for MF Mirae Asset Large Cap Fund-Direct Plan-Growth
+[2021-06-20 13:56:28,633 DEBUG parsedata - parse_mf_data:] Latest Nav:76.139, Nav Date:76.139
+[2021-06-20 13:56:28,633 DEBUG parsedata - parse_mf_data:] Latest Nav:76.139, Nav Date:76.139
+[2021-06-20 13:56:28,633 DEBUG parsedata - parse_mf_data:] Parsing data for MF Mirae Asset Tax Saver Fund-Direct Growth
+[2021-06-20 13:56:28,633 DEBUG parsedata - parse_mf_data:] Parsing data for MF Mirae Asset Tax Saver Fund-Direct Growth
+[2021-06-20 13:56:28,634 DEBUG parsedata - parse_mf_data:] Latest Nav:30.121, Nav Date:30.121
+[2021-06-20 13:56:28,634 DEBUG parsedata - parse_mf_data:] Latest Nav:30.121, Nav Date:30.121
+[2021-06-20 13:56:28,635 DEBUG parsedata - parse_mf_data:] Number of Mutual Funds Scheme: 15
+
+[2021-06-20 13:56:28,635 DEBUG parsedata - parse_mf_data:] Number of Mutual Funds Scheme: 15
+
+[2021-06-20 13:56:28,720 DEBUG capitalgains - _set_gf_nav:] Setting Grandfathered NAV for all Schemes for NAV date 18-JAN-2018
+[2021-06-20 13:56:28,720 DEBUG capitalgains - _set_gf_nav:] Setting Grandfathered NAV for all Schemes for NAV date 18-JAN-2018
+[2021-06-20 13:56:28,742 WARNING capitalgains - _set_gf_nav:] Schemes below  are removed as  Grandfathered NAV was not Found
+[2021-06-20 13:56:28,742 WARNING capitalgains - _set_gf_nav:] Schemes below  are removed as  Grandfathered NAV was not Found
+[2021-06-20 13:56:28,746 WARNING capitalgains - _set_gf_nav:] Mirae Asset Tax Saver Fund-Direct Growth
+[2021-06-20 13:56:28,746 WARNING capitalgains - _set_gf_nav:] Mirae Asset Tax Saver Fund-Direct Growth
+[2021-06-20 13:56:28,748 WARNING capitalgains - _set_gf_nav:] Franklin India Ultra Short Bond Fund Super Institutional Plan-Direct-Growth
+[2021-06-20 13:56:28,748 WARNING capitalgains - _set_gf_nav:] Franklin India Ultra Short Bond Fund Super Institutional Plan-Direct-Growth
+[2021-06-20 13:56:28,750 WARNING capitalgains - _set_gf_nav:] ICICI Prudential Long Term Equity Fund-Direct Plan-Growth
+[2021-06-20 13:56:28,750 WARNING capitalgains - _set_gf_nav:] ICICI Prudential Long Term Equity Fund-Direct Plan-Growth
+[2021-06-20 13:56:28,753 INFO capitalgains - _calculate_capital_gains:] No Missing data Found:
+[2021-06-20 13:56:28,753 INFO capitalgains - _calculate_capital_gains:] No Missing data Found:
+[2021-06-20 13:56:28,875 INFO capitalgains - calc_units_to_sell:] For Scheme DSP Small Cap Fund-Direct Plan-Growth: Sell 3563.92 units for LTCG of 100000.0
+[2021-06-20 13:56:28,875 INFO capitalgains - calc_units_to_sell:] For Scheme DSP Small Cap Fund-Direct Plan-Growth: Sell 3563.92 units for LTCG of 100000.0
+[2021-06-20 13:56:28,880 INFO capitalgains - calc_units_to_sell:] For Scheme Franklin India Flexi Cap Fund-Direct-Growth: Sell 376.05 units for LTCG of 100000.0
+[2021-06-20 13:56:28,880 INFO capitalgains - calc_units_to_sell:] For Scheme Franklin India Flexi Cap Fund-Direct-Growth: Sell 376.05 units for LTCG of 100000.0
+[2021-06-20 13:56:28,885 INFO capitalgains - calc_units_to_sell:] For Scheme Franklin India Smaller Companies Fund-Direct-Growth: Sell 5582.73 units for LTCG of 100000.0
+[2021-06-20 13:56:28,885 INFO capitalgains - calc_units_to_sell:] For Scheme Franklin India Smaller Companies Fund-Direct-Growth: Sell 5582.73 units for LTCG of 100000.0
+[2021-06-20 13:56:28,889 INFO capitalgains - calc_units_to_sell:] For Scheme Franklin India Low Duration Fund-Direct-Growth Total LTCG 68423.93 is less than target LTCG 100000: Sell 15952.61 units for LTCG of 68423.93
+[2021-06-20 13:56:28,889 INFO capitalgains - calc_units_to_sell:] For Scheme Franklin India Low Duration Fund-Direct-Growth Total LTCG 68423.93 is less than target LTCG 100000: Sell 15952.61 units for LTCG of 68423.93
+[2021-06-20 13:56:28,892 INFO capitalgains - calc_units_to_sell:] For Scheme HDFC Top 100 Fund-Direct Plan-Growth Option: Sell 612.03 units for LTCG of 100000.0
+[2021-06-20 13:56:28,892 INFO capitalgains - calc_units_to_sell:] For Scheme HDFC Top 100 Fund-Direct Plan-Growth Option: Sell 612.03 units for LTCG of 100000.0
+[2021-06-20 13:56:28,896 INFO capitalgains - calc_units_to_sell:] For Scheme ICICI Prudential All Seasons Bond Fund-Direct Plan-Growth: Sell 12587.17 units for LTCG of 100000.0
+[2021-06-20 13:56:28,896 INFO capitalgains - calc_units_to_sell:] For Scheme ICICI Prudential All Seasons Bond Fund-Direct Plan-Growth: Sell 12587.17 units for LTCG of 100000.0
+[2021-06-20 13:56:28,898 INFO capitalgains - calc_units_to_sell:] For Scheme ICICI Prudential Banking and PSU Debt Fund-Direct Plan-Growth: Sell 16322.26 units for LTCG of 100000.0
+[2021-06-20 13:56:28,898 INFO capitalgains - calc_units_to_sell:] For Scheme ICICI Prudential Banking and PSU Debt Fund-Direct Plan-Growth: Sell 16322.26 units for LTCG of 100000.0
+[2021-06-20 13:56:28,905 INFO capitalgains - calc_units_to_sell:] For Scheme ICICI Prudential Nifty Next 50 Index Fund-Direct Plan-Growth: Sell 11887.39 units for LTCG of 100000.0
+[2021-06-20 13:56:28,905 INFO capitalgains - calc_units_to_sell:] For Scheme ICICI Prudential Nifty Next 50 Index Fund-Direct Plan-Growth: Sell 11887.39 units for LTCG of 100000.0
+[2021-06-20 13:56:28,908 INFO capitalgains - calc_units_to_sell:] For Scheme ICICI Prudential US Bluechip Equity Fund-Direct Plan-Growth No LTCG exists hence calculation is not applicable
+[2021-06-20 13:56:28,908 INFO capitalgains - calc_units_to_sell:] For Scheme ICICI Prudential US Bluechip Equity Fund-Direct Plan-Growth No LTCG exists hence calculation is not applicable
+[2021-06-20 13:56:28,914 INFO capitalgains - calc_units_to_sell:] For Scheme ICICI Prudential Value Discovery Fund-Direct Plan-Growth: Sell 1375.89 units for LTCG of 100000.0
+[2021-06-20 13:56:28,914 INFO capitalgains - calc_units_to_sell:] For Scheme ICICI Prudential Value Discovery Fund-Direct Plan-Growth: Sell 1375.89 units for LTCG of 100000.0
+[2021-06-20 13:56:28,918 INFO capitalgains - calc_units_to_sell:] For Scheme Mirae Asset Emerging Bluechip Fund-Direct Plan-Growth: Sell 2639.81 units for LTCG of 100000.0
+[2021-06-20 13:56:28,918 INFO capitalgains - calc_units_to_sell:] For Scheme Mirae Asset Emerging Bluechip Fund-Direct Plan-Growth: Sell 2639.81 units for LTCG of 100000.0
+[2021-06-20 13:56:28,924 INFO capitalgains - calc_units_to_sell:] For Scheme Mirae Asset Large Cap Fund-Direct Plan-Growth: Sell 3689.22 units for LTCG of 100000.0
+[2021-06-20 13:56:28,924 INFO capitalgains - calc_units_to_sell:] For Scheme Mirae Asset Large Cap Fund-Direct Plan-Growth: Sell 3689.22 units for LTCG of 100000.0
+[2021-06-20 13:56:28,952 INFO capitalgains - prepare_final_data:] File: data\output\output_mf_totals.csv written to disk
+
+[2021-06-20 13:56:28,952 INFO capitalgains - prepare_final_data:] File: data\output\output_mf_totals.csv written to disk
+
+[2021-06-20 13:56:28,961 INFO capitalgains - prepare_final_data:] File: data\output\output_mf_transactions.csv written to disk
+
+[2021-06-20 13:56:28,961 INFO capitalgains - prepare_final_data:] File: data\output\output_mf_transactions.csv written to disk
+
+[2021-06-20 13:57:00,739 INFO parsedata - _read_data_from_file:] File data\consol_trans_18_June_2021.txt sucessfully read, found 505 records
+
+[2021-06-20 13:57:00,740 DEBUG parsedata - parse_mf_data:] Parsing data for MF DSP Small Cap Fund-Direct Plan-Growth
+[2021-06-20 13:57:00,741 DEBUG parsedata - parse_mf_data:] Latest Nav:98.222, Nav Date:98.222
+[2021-06-20 13:57:00,741 DEBUG parsedata - parse_mf_data:] Parsing data for MF Franklin India Flexi Cap Fund-Direct-Growth
+[2021-06-20 13:57:00,743 DEBUG parsedata - parse_mf_data:] Latest Nav:903.5355, Nav Date:903.5355
+[2021-06-20 13:57:00,743 DEBUG parsedata - parse_mf_data:] Parsing data for MF Franklin India Smaller Companies Fund-Direct-Growth
+[2021-06-20 13:57:00,744 DEBUG parsedata - parse_mf_data:] Latest Nav:83.3396, Nav Date:83.3396
+[2021-06-20 13:57:00,744 DEBUG parsedata - parse_mf_data:] Parsing data for MF Franklin India Ultra Short Bond Fund Super Institutional Plan-Direct-Growth
+[2021-06-20 13:57:00,744 DEBUG parsedata - parse_mf_data:] Latest Nav:30.2922, Nav Date:30.2922
+[2021-06-20 13:57:00,744 DEBUG parsedata - parse_mf_data:] Parsing data for MF Franklin India Low Duration Fund-Direct-Growth
+[2021-06-20 13:57:00,745 DEBUG parsedata - parse_mf_data:] Latest Nav:24.2658, Nav Date:24.2658
+[2021-06-20 13:57:00,745 DEBUG parsedata - parse_mf_data:] Parsing data for MF Franklin India Low Duration Fund-Segregated Portfolio 2 )-Growth
+[2021-06-20 13:57:00,745 DEBUG parsedata - parse_mf_data:] Latest Nav:0.0, MF SchemeFranklin India Low Duration Fund-Segregated Portfolio 2 )-Growth will be ignored
+[2021-06-20 13:57:00,745 DEBUG parsedata - parse_mf_data:] Parsing data for MF HDFC Top 100 Fund-Direct Plan-Growth Option
+[2021-06-20 13:57:00,745 DEBUG parsedata - parse_mf_data:] Latest Nav:661.419, Nav Date:661.419
+[2021-06-20 13:57:00,746 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential All Seasons Bond Fund-Direct Plan-Growth
+[2021-06-20 13:57:00,746 DEBUG parsedata - parse_mf_data:] Latest Nav:29.7814, Nav Date:29.7814
+[2021-06-20 13:57:00,746 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential Banking and PSU Debt Fund-Direct Plan-Growth
+[2021-06-20 13:57:00,746 DEBUG parsedata - parse_mf_data:] Latest Nav:26.0015, Nav Date:26.0015
+[2021-06-20 13:57:00,746 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential Long Term Equity Fund-Direct Plan-Growth
+[2021-06-20 13:57:00,746 DEBUG parsedata - parse_mf_data:] Latest Nav:562.58, Nav Date:562.58
+[2021-06-20 13:57:00,747 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential Nifty Next 50 Index Fund-Direct Plan-Growth
+[2021-06-20 13:57:00,747 DEBUG parsedata - parse_mf_data:] Latest Nav:35.1068, Nav Date:35.1068
+[2021-06-20 13:57:00,748 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential US Bluechip Equity Fund-Direct Plan-Growth
+[2021-06-20 13:57:00,748 DEBUG parsedata - parse_mf_data:] Latest Nav:47.99, Nav Date:47.99
+[2021-06-20 13:57:00,748 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential Value Discovery Fund-Direct Plan-Growth
+[2021-06-20 13:57:00,750 DEBUG parsedata - parse_mf_data:] Latest Nav:230.32, Nav Date:230.32
+[2021-06-20 13:57:00,751 DEBUG parsedata - parse_mf_data:] Parsing data for MF Mirae Asset Emerging Bluechip Fund-Direct Plan-Growth
+[2021-06-20 13:57:00,752 DEBUG parsedata - parse_mf_data:] Latest Nav:93.405, Nav Date:93.405
+[2021-06-20 13:57:00,752 DEBUG parsedata - parse_mf_data:] Parsing data for MF Mirae Asset Large Cap Fund-Direct Plan-Growth
+[2021-06-20 13:57:00,752 DEBUG parsedata - parse_mf_data:] Latest Nav:76.139, Nav Date:76.139
+[2021-06-20 13:57:00,752 DEBUG parsedata - parse_mf_data:] Parsing data for MF Mirae Asset Tax Saver Fund-Direct Growth
+[2021-06-20 13:57:00,752 DEBUG parsedata - parse_mf_data:] Latest Nav:30.121, Nav Date:30.121
+[2021-06-20 13:57:00,754 DEBUG parsedata - parse_mf_data:] Number of Mutual Funds Scheme: 15
+
+[2021-06-20 13:57:00,832 DEBUG capitalgains - _set_gf_nav:] Setting Grandfathered NAV for all Schemes for NAV date 18-JAN-2018
+[2021-06-20 13:57:00,863 WARNING capitalgains - _set_gf_nav:] Schemes below  are removed as  Grandfathered NAV was not Found
+[2021-06-20 13:57:00,863 WARNING capitalgains - _set_gf_nav:] ICICI Prudential Long Term Equity Fund-Direct Plan-Growth
+[2021-06-20 13:57:00,864 WARNING capitalgains - _set_gf_nav:] Mirae Asset Tax Saver Fund-Direct Growth
+[2021-06-20 13:57:00,865 WARNING capitalgains - _set_gf_nav:] Franklin India Ultra Short Bond Fund Super Institutional Plan-Direct-Growth
+[2021-06-20 13:57:00,867 INFO capitalgains - _calculate_capital_gains:] No Missing data Found:
+[2021-06-20 13:57:01,008 INFO capitalgains - calc_units_to_sell:] For Scheme DSP Small Cap Fund-Direct Plan-Growth: Sell 3563.92 units for LTCG of 100000.0
+[2021-06-20 13:57:01,012 INFO capitalgains - calc_units_to_sell:] For Scheme Franklin India Flexi Cap Fund-Direct-Growth: Sell 376.05 units for LTCG of 100000.0
+[2021-06-20 13:57:01,017 INFO capitalgains - calc_units_to_sell:] For Scheme Franklin India Smaller Companies Fund-Direct-Growth: Sell 5582.73 units for LTCG of 100000.0
+[2021-06-20 13:57:01,022 INFO capitalgains - calc_units_to_sell:] For Scheme Franklin India Low Duration Fund-Direct-Growth Total LTCG 68423.93 is less than target LTCG 100000: Sell 15952.61 units for LTCG of 68423.93
+[2021-06-20 13:57:01,024 INFO capitalgains - calc_units_to_sell:] For Scheme HDFC Top 100 Fund-Direct Plan-Growth Option: Sell 612.03 units for LTCG of 100000.0
+[2021-06-20 13:57:01,028 INFO capitalgains - calc_units_to_sell:] For Scheme ICICI Prudential All Seasons Bond Fund-Direct Plan-Growth: Sell 12587.17 units for LTCG of 100000.0
+[2021-06-20 13:57:01,034 INFO capitalgains - calc_units_to_sell:] For Scheme ICICI Prudential Banking and PSU Debt Fund-Direct Plan-Growth: Sell 16322.26 units for LTCG of 100000.0
+[2021-06-20 13:57:01,038 INFO capitalgains - calc_units_to_sell:] For Scheme ICICI Prudential Nifty Next 50 Index Fund-Direct Plan-Growth: Sell 11887.39 units for LTCG of 100000.0
+[2021-06-20 13:57:01,041 INFO capitalgains - calc_units_to_sell:] For Scheme ICICI Prudential US Bluechip Equity Fund-Direct Plan-Growth No LTCG exists hence calculation is not applicable
+[2021-06-20 13:57:01,047 INFO capitalgains - calc_units_to_sell:] For Scheme ICICI Prudential Value Discovery Fund-Direct Plan-Growth: Sell 1375.89 units for LTCG of 100000.0
+[2021-06-20 13:57:01,053 INFO capitalgains - calc_units_to_sell:] For Scheme Mirae Asset Emerging Bluechip Fund-Direct Plan-Growth: Sell 2639.81 units for LTCG of 100000.0
+[2021-06-20 13:57:01,056 INFO capitalgains - calc_units_to_sell:] For Scheme Mirae Asset Large Cap Fund-Direct Plan-Growth: Sell 3689.22 units for LTCG of 100000.0
+[2021-06-20 13:57:01,091 INFO capitalgains - prepare_final_data:] File: data\output\output_mf_totals.csv written to disk
+
+[2021-06-20 13:57:01,101 INFO capitalgains - prepare_final_data:] File: data\output\output_mf_transactions.csv written to disk
+
+[2021-06-20 14:25:03,622 INFO main - main:] **************************************************Start Of Process**************************************************
+[2021-06-20 14:25:03,623 INFO parsedata - _read_data_from_file:] File data\consol_trans_18_June_2021.txt sucessfully read, found 505 records
+
+[2021-06-20 14:25:03,624 DEBUG parsedata - parse_mf_data:] Parsing data for MF DSP Small Cap Fund-Direct Plan-Growth
+[2021-06-20 14:25:03,630 DEBUG parsedata - parse_mf_data:] Latest Nav:98.222, Nav Date:98.222
+[2021-06-20 14:25:03,630 DEBUG parsedata - parse_mf_data:] Parsing data for MF Franklin India Flexi Cap Fund-Direct-Growth
+[2021-06-20 14:25:03,632 DEBUG parsedata - parse_mf_data:] Latest Nav:903.5355, Nav Date:903.5355
+[2021-06-20 14:25:03,632 DEBUG parsedata - parse_mf_data:] Parsing data for MF Franklin India Smaller Companies Fund-Direct-Growth
+[2021-06-20 14:25:03,634 DEBUG parsedata - parse_mf_data:] Latest Nav:83.3396, Nav Date:83.3396
+[2021-06-20 14:25:03,634 DEBUG parsedata - parse_mf_data:] Parsing data for MF Franklin India Ultra Short Bond Fund Super Institutional Plan-Direct-Growth
+[2021-06-20 14:25:03,634 DEBUG parsedata - parse_mf_data:] Latest Nav:30.2922, Nav Date:30.2922
+[2021-06-20 14:25:03,634 DEBUG parsedata - parse_mf_data:] Parsing data for MF Franklin India Low Duration Fund-Direct-Growth
+[2021-06-20 14:25:03,635 DEBUG parsedata - parse_mf_data:] Latest Nav:24.2658, Nav Date:24.2658
+[2021-06-20 14:25:03,635 DEBUG parsedata - parse_mf_data:] Parsing data for MF Franklin India Low Duration Fund-Segregated Portfolio 2 )-Growth
+[2021-06-20 14:25:03,635 DEBUG parsedata - parse_mf_data:] Latest Nav:0.0, MF SchemeFranklin India Low Duration Fund-Segregated Portfolio 2 )-Growth will be ignored
+[2021-06-20 14:25:03,635 DEBUG parsedata - parse_mf_data:] Parsing data for MF HDFC Top 100 Fund-Direct Plan-Growth Option
+[2021-06-20 14:25:03,636 DEBUG parsedata - parse_mf_data:] Latest Nav:661.419, Nav Date:661.419
+[2021-06-20 14:25:03,636 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential All Seasons Bond Fund-Direct Plan-Growth
+[2021-06-20 14:25:03,636 DEBUG parsedata - parse_mf_data:] Latest Nav:29.7814, Nav Date:29.7814
+[2021-06-20 14:25:03,637 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential Banking and PSU Debt Fund-Direct Plan-Growth
+[2021-06-20 14:25:03,637 DEBUG parsedata - parse_mf_data:] Latest Nav:26.0015, Nav Date:26.0015
+[2021-06-20 14:25:03,637 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential Long Term Equity Fund-Direct Plan-Growth
+[2021-06-20 14:25:03,637 DEBUG parsedata - parse_mf_data:] Latest Nav:562.58, Nav Date:562.58
+[2021-06-20 14:25:03,638 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential Nifty Next 50 Index Fund-Direct Plan-Growth
+[2021-06-20 14:25:03,639 DEBUG parsedata - parse_mf_data:] Latest Nav:35.1068, Nav Date:35.1068
+[2021-06-20 14:25:03,640 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential US Bluechip Equity Fund-Direct Plan-Growth
+[2021-06-20 14:25:03,641 DEBUG parsedata - parse_mf_data:] Latest Nav:47.99, Nav Date:47.99
+[2021-06-20 14:25:03,641 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential Value Discovery Fund-Direct Plan-Growth
+[2021-06-20 14:25:03,644 DEBUG parsedata - parse_mf_data:] Latest Nav:230.32, Nav Date:230.32
+[2021-06-20 14:25:03,644 DEBUG parsedata - parse_mf_data:] Parsing data for MF Mirae Asset Emerging Bluechip Fund-Direct Plan-Growth
+[2021-06-20 14:25:03,645 DEBUG parsedata - parse_mf_data:] Latest Nav:93.405, Nav Date:93.405
+[2021-06-20 14:25:03,646 DEBUG parsedata - parse_mf_data:] Parsing data for MF Mirae Asset Large Cap Fund-Direct Plan-Growth
+[2021-06-20 14:25:03,647 DEBUG parsedata - parse_mf_data:] Latest Nav:76.139, Nav Date:76.139
+[2021-06-20 14:25:03,647 DEBUG parsedata - parse_mf_data:] Parsing data for MF Mirae Asset Tax Saver Fund-Direct Growth
+[2021-06-20 14:25:03,647 DEBUG parsedata - parse_mf_data:] Latest Nav:30.121, Nav Date:30.121
+[2021-06-20 14:25:03,649 DEBUG parsedata - parse_mf_data:] Number of Mutual Funds Scheme: 15
+
+[2021-06-20 14:25:03,649 DEBUG capitalgains - _set_gf_nav:] Setting Grandfathered NAV for all Schemes for NAV date 18-JAN-2018
+[2021-06-20 14:25:03,703 WARNING capitalgains - _set_gf_nav:] Schemes below  are removed as  Grandfathered NAV was not Found
+[2021-06-20 14:25:03,703 WARNING capitalgains - _set_gf_nav:] Franklin India Ultra Short Bond Fund Super Institutional Plan-Direct-Growth
+[2021-06-20 14:25:03,704 WARNING capitalgains - _set_gf_nav:] ICICI Prudential Long Term Equity Fund-Direct Plan-Growth
+[2021-06-20 14:25:03,705 WARNING capitalgains - _set_gf_nav:] Mirae Asset Tax Saver Fund-Direct Growth
+[2021-06-20 14:25:03,707 INFO capitalgains - _calculate_capital_gains:] No Missing data Found:
+[2021-06-20 14:25:03,853 INFO capitalgains - calc_units_to_sell:] For Scheme DSP Small Cap Fund-Direct Plan-Growth: Sell 3563.92 units for LTCG of 100000.0
+[2021-06-20 14:25:03,859 INFO capitalgains - calc_units_to_sell:] For Scheme Franklin India Flexi Cap Fund-Direct-Growth: Sell 376.05 units for LTCG of 100000.0
+[2021-06-20 14:25:03,864 INFO capitalgains - calc_units_to_sell:] For Scheme Franklin India Smaller Companies Fund-Direct-Growth: Sell 5582.73 units for LTCG of 100000.0
+[2021-06-20 14:25:03,868 INFO capitalgains - calc_units_to_sell:] For Scheme Franklin India Low Duration Fund-Direct-Growth Total LTCG 68423.93 is less than target LTCG 100000.0: Sell 15952.61 units for LTCG of 68423.93
+[2021-06-20 14:25:03,871 INFO capitalgains - calc_units_to_sell:] For Scheme HDFC Top 100 Fund-Direct Plan-Growth Option: Sell 612.03 units for LTCG of 100000.0
+[2021-06-20 14:25:03,873 INFO capitalgains - calc_units_to_sell:] For Scheme ICICI Prudential All Seasons Bond Fund-Direct Plan-Growth: Sell 12587.17 units for LTCG of 100000.0
+[2021-06-20 14:25:03,876 INFO capitalgains - calc_units_to_sell:] For Scheme ICICI Prudential Banking and PSU Debt Fund-Direct Plan-Growth: Sell 16322.26 units for LTCG of 100000.0
+[2021-06-20 14:25:03,882 INFO capitalgains - calc_units_to_sell:] For Scheme ICICI Prudential Nifty Next 50 Index Fund-Direct Plan-Growth: Sell 11887.39 units for LTCG of 100000.0
+[2021-06-20 14:25:03,884 INFO capitalgains - calc_units_to_sell:] For Scheme ICICI Prudential US Bluechip Equity Fund-Direct Plan-Growth No LTCG exists hence calculation is not applicable
+[2021-06-20 14:25:03,890 INFO capitalgains - calc_units_to_sell:] For Scheme ICICI Prudential Value Discovery Fund-Direct Plan-Growth: Sell 1375.89 units for LTCG of 100000.0
+[2021-06-20 14:25:03,895 INFO capitalgains - calc_units_to_sell:] For Scheme Mirae Asset Emerging Bluechip Fund-Direct Plan-Growth: Sell 2639.81 units for LTCG of 100000.0
+[2021-06-20 14:25:03,899 INFO capitalgains - calc_units_to_sell:] For Scheme Mirae Asset Large Cap Fund-Direct Plan-Growth: Sell 3689.22 units for LTCG of 100000.0
+[2021-06-20 14:25:03,937 INFO capitalgains - prepare_final_data:] File: data\output\output_mf_totals.csv written to disk
+
+[2021-06-20 14:25:03,943 INFO capitalgains - prepare_final_data:] File: data\output\output_mf_transactions.csv written to disk
+
+[2021-06-20 14:25:03,944 INFO main - main:] **************************************************End Of Process**************************************************
+
+[2021-06-20 14:30:45,830 INFO main - main:] **************************************************Start Of Process**************************************************
+[2021-06-20 14:30:45,831 INFO parsedata - _read_data_from_file:] File data\consol_trans_18_June_2021.txt sucessfully read, found 505 records
+
+[2021-06-20 14:30:45,832 DEBUG parsedata - parse_mf_data:] Parsing data for MF DSP Small Cap Fund-Direct Plan-Growth
+[2021-06-20 14:30:45,835 DEBUG parsedata - parse_mf_data:] Latest Nav:98.222, Nav Date:98.222
+[2021-06-20 14:30:45,835 DEBUG parsedata - parse_mf_data:] Parsing data for MF Franklin India Flexi Cap Fund-Direct-Growth
+[2021-06-20 14:30:45,836 DEBUG parsedata - parse_mf_data:] Latest Nav:903.5355, Nav Date:903.5355
+[2021-06-20 14:30:45,837 DEBUG parsedata - parse_mf_data:] Parsing data for MF Franklin India Smaller Companies Fund-Direct-Growth
+[2021-06-20 14:30:45,837 DEBUG parsedata - parse_mf_data:] Latest Nav:83.3396, Nav Date:83.3396
+[2021-06-20 14:30:45,838 DEBUG parsedata - parse_mf_data:] Parsing data for MF Franklin India Ultra Short Bond Fund Super Institutional Plan-Direct-Growth
+[2021-06-20 14:30:45,838 DEBUG parsedata - parse_mf_data:] Latest Nav:30.2922, Nav Date:30.2922
+[2021-06-20 14:30:45,838 DEBUG parsedata - parse_mf_data:] Parsing data for MF Franklin India Low Duration Fund-Direct-Growth
+[2021-06-20 14:30:45,838 DEBUG parsedata - parse_mf_data:] Latest Nav:24.2658, Nav Date:24.2658
+[2021-06-20 14:30:45,838 DEBUG parsedata - parse_mf_data:] Parsing data for MF Franklin India Low Duration Fund-Segregated Portfolio 2 )-Growth
+[2021-06-20 14:30:45,838 DEBUG parsedata - parse_mf_data:] Latest Nav:0.0, MF SchemeFranklin India Low Duration Fund-Segregated Portfolio 2 )-Growth will be ignored
+[2021-06-20 14:30:45,838 DEBUG parsedata - parse_mf_data:] Parsing data for MF HDFC Top 100 Fund-Direct Plan-Growth Option
+[2021-06-20 14:30:45,839 DEBUG parsedata - parse_mf_data:] Latest Nav:661.419, Nav Date:661.419
+[2021-06-20 14:30:45,839 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential All Seasons Bond Fund-Direct Plan-Growth
+[2021-06-20 14:30:45,839 DEBUG parsedata - parse_mf_data:] Latest Nav:29.7814, Nav Date:29.7814
+[2021-06-20 14:30:45,839 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential Banking and PSU Debt Fund-Direct Plan-Growth
+[2021-06-20 14:30:45,839 DEBUG parsedata - parse_mf_data:] Latest Nav:26.0015, Nav Date:26.0015
+[2021-06-20 14:30:45,839 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential Long Term Equity Fund-Direct Plan-Growth
+[2021-06-20 14:30:45,839 DEBUG parsedata - parse_mf_data:] Latest Nav:562.58, Nav Date:562.58
+[2021-06-20 14:30:45,840 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential Nifty Next 50 Index Fund-Direct Plan-Growth
+[2021-06-20 14:30:45,840 DEBUG parsedata - parse_mf_data:] Latest Nav:35.1068, Nav Date:35.1068
+[2021-06-20 14:30:45,840 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential US Bluechip Equity Fund-Direct Plan-Growth
+[2021-06-20 14:30:45,841 DEBUG parsedata - parse_mf_data:] Latest Nav:47.99, Nav Date:47.99
+[2021-06-20 14:30:45,841 DEBUG parsedata - parse_mf_data:] Parsing data for MF ICICI Prudential Value Discovery Fund-Direct Plan-Growth
+[2021-06-20 14:30:45,842 DEBUG parsedata - parse_mf_data:] Latest Nav:230.32, Nav Date:230.32
+[2021-06-20 14:30:45,842 DEBUG parsedata - parse_mf_data:] Parsing data for MF Mirae Asset Emerging Bluechip Fund-Direct Plan-Growth
+[2021-06-20 14:30:45,843 DEBUG parsedata - parse_mf_data:] Latest Nav:93.405, Nav Date:93.405
+[2021-06-20 14:30:45,843 DEBUG parsedata - parse_mf_data:] Parsing data for MF Mirae Asset Large Cap Fund-Direct Plan-Growth
+[2021-06-20 14:30:45,844 DEBUG parsedata - parse_mf_data:] Latest Nav:76.139, Nav Date:76.139
+[2021-06-20 14:30:45,844 DEBUG parsedata - parse_mf_data:] Parsing data for MF Mirae Asset Tax Saver Fund-Direct Growth
+[2021-06-20 14:30:45,844 DEBUG parsedata - parse_mf_data:] Latest Nav:30.121, Nav Date:30.121
+[2021-06-20 14:30:45,846 DEBUG parsedata - parse_mf_data:] Number of Mutual Funds Scheme: 15
+
+[2021-06-20 14:30:45,846 DEBUG capitalgains - _set_gf_nav:] Setting Grandfathered NAV for all Schemes for NAV date 18-JAN-2018
+[2021-06-20 14:30:45,881 WARNING capitalgains - _set_gf_nav:] Schemes below  are removed as  Grandfathered NAV was not Found
+[2021-06-20 14:30:45,881 WARNING capitalgains - _set_gf_nav:] Mirae Asset Tax Saver Fund-Direct Growth
+[2021-06-20 14:30:45,881 WARNING capitalgains - _set_gf_nav:] Franklin India Ultra Short Bond Fund Super Institutional Plan-Direct-Growth
+[2021-06-20 14:30:45,882 WARNING capitalgains - _set_gf_nav:] ICICI Prudential Long Term Equity Fund-Direct Plan-Growth
+[2021-06-20 14:30:45,883 INFO capitalgains - _calculate_capital_gains:] No Missing data Found:
+[2021-06-20 14:30:45,968 INFO capitalgains - calc_units_to_sell:] For Scheme DSP Small Cap Fund-Direct Plan-Growth: Sell 3563.92 units for LTCG of 100000.0
+[2021-06-20 14:30:45,973 INFO capitalgains - calc_units_to_sell:] For Scheme Franklin India Flexi Cap Fund-Direct-Growth: Sell 376.05 units for LTCG of 100000.0
+[2021-06-20 14:30:45,976 INFO capitalgains - calc_units_to_sell:] For Scheme Franklin India Smaller Companies Fund-Direct-Growth: Sell 5582.73 units for LTCG of 100000.0
+[2021-06-20 14:30:45,978 INFO capitalgains - calc_units_to_sell:] For Scheme Franklin India Low Duration Fund-Direct-Growth Total LTCG 68423.93 is less than target LTCG 100000.0: Sell 15952.61 units for LTCG of 68423.93
+[2021-06-20 14:30:45,981 INFO capitalgains - calc_units_to_sell:] For Scheme HDFC Top 100 Fund-Direct Plan-Growth Option: Sell 612.03 units for LTCG of 100000.0
+[2021-06-20 14:30:45,983 INFO capitalgains - calc_units_to_sell:] For Scheme ICICI Prudential All Seasons Bond Fund-Direct Plan-Growth: Sell 12587.17 units for LTCG of 100000.0
+[2021-06-20 14:30:45,985 INFO capitalgains - calc_units_to_sell:] For Scheme ICICI Prudential Banking and PSU Debt Fund-Direct Plan-Growth: Sell 16322.26 units for LTCG of 100000.0
+[2021-06-20 14:30:45,988 INFO capitalgains - calc_units_to_sell:] For Scheme ICICI Prudential Nifty Next 50 Index Fund-Direct Plan-Growth: Sell 11887.39 units for LTCG of 100000.0
+[2021-06-20 14:30:45,990 INFO capitalgains - calc_units_to_sell:] For Scheme ICICI Prudential US Bluechip Equity Fund-Direct Plan-Growth No LTCG exists hence calculation is not applicable
+[2021-06-20 14:30:45,993 INFO capitalgains - calc_units_to_sell:] For Scheme ICICI Prudential Value Discovery Fund-Direct Plan-Growth: Sell 1375.89 units for LTCG of 100000.0
+[2021-06-20 14:30:45,996 INFO capitalgains - calc_units_to_sell:] For Scheme Mirae Asset Emerging Bluechip Fund-Direct Plan-Growth: Sell 2639.81 units for LTCG of 100000.0
+[2021-06-20 14:30:45,999 INFO capitalgains - calc_units_to_sell:] For Scheme Mirae Asset Large Cap Fund-Direct Plan-Growth: Sell 3689.22 units for LTCG of 100000.0
+[2021-06-20 14:30:46,022 INFO capitalgains - prepare_final_data:] File: data\output\output_mf_totals.csv written to disk
+
+[2021-06-20 14:30:46,027 INFO capitalgains - prepare_final_data:] File: data\output\output_mf_transactions.csv written to disk
+
+[2021-06-20 14:30:46,028 INFO main - main:] **************************************************End Of Process**************************************************
+
