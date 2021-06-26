@@ -15,3 +15,9 @@ src/__pycache__/capitalgains.cpython-39.pyc
 .gitignore
 .gitignore
 data/nav/gf_nav_all.html
+src/__pycache__/utils.cpython-39.pyc
+src/__pycache__/constants.cpython-39.pyc
+data/nav/gf_nav_all.txt
+data/nav/gf_nav_all.csv
+data/nav/gf_missing_nav.csv
+data/nav/gf_nav_all.csv
