@@ -3,6 +3,7 @@ import re
 import logging
 import pandas as pd
 import src.constants as ct
+import src.utils as ut
 
 from typing import Iterator
 from collections import defaultdict
@@ -90,21 +91,23 @@ class DataParser:
         #Convert GROWTH to Camelcase (Growth)
         # input :'4859909139674 Franklin India Ultra Short Bond Fund Super Institutional Plan-Direct-GROWTH'
         # output: '4859909139674 Franklin India Ultra Short Bond Fund Super Institutional Plan-Direct-Growth'
-        scheme_words = scheme_name.split('-')
-        scheme_words[-1] = scheme_words[-1].title()
+        # scheme_words = scheme_name.split('-')
+        # scheme_words[-1] = scheme_words[-1].title()
         
         # input:'Mirae Asset Tax Saver Fund-Direct Growth'
         # output:'Mirae Asset Tax Saver Fund-Direct-Growth'
-        if scheme_words[-1] == 'Direct Growth':
-            scheme_words[-1] = 'Direct-Growth'
-        scheme_name = '-'.join([text for text in  scheme_words])     
+        # if scheme_words[-1] == 'Direct Growth':
+        #     scheme_words[-1] = 'Direct-Growth'
+        # scheme_name = '-'.join([text for text in  scheme_words])     
 
         #Remove leading digits for funds like Franklin
         # input:'4859909139674 Franklin India Ultra Short Bond Fund Super Institutional Plan-Direct-Growth'
         # output: 'Franklin India Ultra Short Bond Fund Super Institutional Plan-Direct-Growth'
         if scheme_name .split()[0].isnumeric():
             scheme_name = ' '.join([text for text in scheme_name .split()[1:]])
-
+        
+        #Remove Spaces, and simplify MF Option and Plan names
+        scheme_name = ut.rename_mf_scheme(scheme_name)
         return scheme_name  
 
     def parse_mf_data(self,file_path:str)->tuple[pd.DataFrame,pd.DataFrame]:
