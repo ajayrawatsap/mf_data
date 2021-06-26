@@ -106,7 +106,7 @@ class CapitalGains:
         self.mf_trans_df[cols_to_round] = self.mf_trans_df[cols_to_round].round(2)   
 
 
-    def calc_units_to_sell(self,scheme_name:str, target_ltcg:float = 100000)->tuple[float, float]:
+    def calc_units_to_sell(self,scheme_name:str, target_ltcg:float = 100000)->tuple[float, float,str]:
         '''
         Calculate cumilative LTCG and units for a single MF scheme
         Use it to claculate the traget units based on input target LTCG    
@@ -202,7 +202,7 @@ class CapitalGains:
         #Write to File
         out_hdr_file = os.path.join(ct.DATA_DIR, ct.OUT_DIR, ct.OUT_FILE_HDR)
         self.output_hdr_df.to_csv(out_hdr_file, index= False)
-        logging.info(f'File: {out_hdr_file} written to disk\n')
+        logging.info(f'File: {out_hdr_file} written to disk')
 
         out_trans_file = os.path.join(ct.DATA_DIR, ct.OUT_DIR, ct.OUT_FILE_TRANS)
         self.output_trans_df.to_csv(out_trans_file, index= False)

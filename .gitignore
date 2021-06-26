@@ -1,3 +1,11 @@
 data/logs.log
 data/output/output_mf_totals.csv
 data/output/output_mf_transactions.csv
+
+src/__pycache__/constants.cpython-37.pyc
+src/__pycache__/parsedata.cpython-37.pyc
+src/__pycache__/utils.cpython-37.pyc
+data/pdftext.txt
+data/output/output_mf_totals.csv
+src/__pycache__/parsedata.cpython-39.pyc
+demo.ipynb

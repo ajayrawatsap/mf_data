@@ -92,6 +92,11 @@ class DataParser:
         # output: '4859909139674 Franklin India Ultra Short Bond Fund Super Institutional Plan-Direct-Growth'
         scheme_words = scheme_name.split('-')
         scheme_words[-1] = scheme_words[-1].title()
+        
+        # input:'Mirae Asset Tax Saver Fund-Direct Growth'
+        # output:'Mirae Asset Tax Saver Fund-Direct-Growth'
+        if scheme_words[-1] == 'Direct Growth':
+            scheme_words[-1] = 'Direct-Growth'
         scheme_name = '-'.join([text for text in  scheme_words])     
 
         #Remove leading digits for funds like Franklin
