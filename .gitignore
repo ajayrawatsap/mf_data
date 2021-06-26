@@ -9,3 +9,9 @@ data/pdftext.txt
 data/output/output_mf_totals.csv
 src/__pycache__/parsedata.cpython-39.pyc
 demo.ipynb
+src/__pycache__/capitalgains.cpython-39.pyc
+.gitignore
+.gitignore
+.gitignore
+.gitignore
+data/nav/gf_nav_all.html
