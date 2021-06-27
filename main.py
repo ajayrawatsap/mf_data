@@ -25,5 +25,5 @@ def main(file_name:str, display_logs ='yes', target_ltcg:float = 100000.00 ):
     logging.info(f'{"*" * 50}End Of Process{"*" * 50}\n') 
 
 if __name__ == "__main__":
-    main('consol_trans_18_June_2021_chrome.txt')
+    main('sample_data.txt')
 
