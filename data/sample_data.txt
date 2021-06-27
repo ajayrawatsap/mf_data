@@ -1,0 +1,65 @@
+CAMSCASWS-1806211448 Version:V3.4 Live-1006
+Consolidated Account Statement
+01-Jan-2010 To 18-Jun-2021
+Page 1 of 7
+Email Id: dummy12@gmail.com
+
+Phone Res: 91 Phone Off: 0
+Mobile: +91123456785
+This Consolidated Account Statement is brought to you as an investor
+friendly initiative by CAMS, KFintech and FTAMIL, and lists the
+transactions, balances and valuation of Mutual Funds in which you are
+holding investments. The consolidation has been carried out based on the
+email id entered by you. If you have not entered a PAN Number and if the
+email id is common to several members of your family, this statement will
+consolidate all those investments as well.
+If you find any folios missing from this consolidation, you have not
+registered your email id against those folios.
+Date Transaction Amount Units Price Unit
+(INR) (INR) Balance
+DSP Mutual Fund
+PAN: RANDOM23D KYC: OK PAN: OK
+D788-DSP Small Cap Fund - Direct Plan - Growth (formerly DSP Micro Cap Fund)(Advisor: DIRECT) Registrar : CAMS
+Folio No: 2355733 / 27
+ Opening Unit Balance: 0.000
+05-Jan-2017 Purchase - via Online - DIRECT 60,000.00 1,141.770 52.550 100
+10-Jan-2017 Purchase - via Online - DIRECT 10,000.00 189.584 52.747 300
+12-Jan-2017 Purchase - via Online - DIRECT 10,000.00 1,87.511 53.262 400
+13-Jan-2017 Purchase - via Online - DIRECT 10,000.00 1,85.795 53.169 600
+16-Jan-2017 Purchase - via Online - DIRECT 10,000.00 1,87.891 53.308 800
+19-Jan-2017 Purchase - via Online - DIRECT 10,000.00 1,858.840 53.797 100
+20-Jan-2017 ***Invalid Purchase01-JAN-2020_ (Reversal - Code IV )***
+31-Dec-2020 Purchase - via Online - DIRECT 20,000.00 2,66.000 75.015 100
+31-Dec-2020 *** Stamp Duty *** 10.00
+NAV on 17-Jun-2021: INR 98.222 Valuation on 17-Jun-2021: INR 10000.00
+"Entry Load - Nil. Exit Load with effect from 01-Aug-2015 - 1% if redeemed before 12 months. Nil for greater than or equal to 12 months. For SIP/SSIP/STP
+transactions: Applicable load for each transaction is based on load structure as on the registration date. For details, please refer to SID and Addenda available on
+www.dspim.com. With effect from March 16, 2018 the scheme name is changed from DSP Micro Cap Fund to DSP Small Cap Fund."
+Closing Unit Balance: 13,196.649
+HDFC Mutual Fund
+PAN: RANDOM23D KYC: OK PAN: OK
+H44T-HDFC Top 100 Fund - Direct Plan - Growth Option (formerly HDFC Top 200 Fund)(Advisor: DIRECT) Registrar : CAMS
+Folio No: 6813412 / 89
+ Opening Unit Balance: 0.000
+24-Mar-2017 ***SIPRegistered***
+11-Apr-2017 Switch-In - From HDFC Top 200 Fund-Growth - via HDFCMFOnline 10,000.00 23.76 420.741 699.152
+26-Apr-2017 Switch-In - From HDFC Prudence Fund-Growth - via HDFCMFOnline 20,000.00 47.17 423.734 1,066.532
+05-May-2017 SIP Purchase - Instalment 1/12 - via HDFCMFOnline 10,000.00 23.479 425.905 1,090.011
+05-Jun-2017 SIP Purchase - Instalment 2/12 - via HDFCMFOnline 10,000.00 23.018 434.434 1,113.029
+05-Jul-2017 SIP Purchase - Instalment 3/12 - via HDFCMFOnline 10,000.00 23.118 432.561 1,136.147
+07-Aug-2017 SIP Purchase - Instalment 4/12 - via HDFCMFOnline 10,000.00 21.976 455.048 1,158.123
+05-Sep-2017 SIP Purchase - Instalment 5/12 10,000.00 22.469 445.060 1,180.592
+05-Oct-2017 SIP Purchase - Instalment 6/12 10,000.00 22.706 440.405 1,203.298
+06-Nov-2017 SIP Purchase - Instalment 7/12 10,000.00 20.793 480.929 1,224.091
+05-Dec-2017 SIP Purchase - Instalment 8/12 10,000.00 21.536 464.348 1,245.627
+05-Jan-2018 SIP Purchase - Instalment 9/12 10,000.00 20.706 482.962 1,266.333
+05-Feb-2018 SIP Purchase - Instalment 10/12 10,000.00 20.831 480.051 1,287.164
+05-Mar-2018 SIP Purchase - Instalment 11/12 10,000.00 21.801 458.693 1,308.965
+05-Apr-2018 SIP Purchase - Instalment 12/12 10,000.00 22.078 452.941 1,331.043
+NAV on 17-Jun-2021: INR 661.419 Valuation on 17-Jun-2021: INR 880,377.13
+*Due to change in the Scheme Name and fundamental attributes of HDFC Top 200 Fund w.e.f.  May 23, 2018, the Scheme shall be managed as HDFC Top 100 Fund
+and type of the scheme has been changed to an Open-ended Equity Scheme predominantly investing in large cap stocks - Current Load Structure : Entry Load - Nil.
+Exit Load : 1% if units are redeemed/swtiched-out within 1 year; No Exit Load if units are redeemed /switched-out after 1 year from the date of investment with
+effect from May 08, 2015. The rate of exit load levied on units redeemed will be the rate prevailing at the time of allotment of the units. For further details visit
+www.hdfcfund.com (under Investor Corner) or contact any of our Investor Service Centre. GST Identification Number : 27AAATH1809A1Z9
+Closing Unit Balance: 10000
