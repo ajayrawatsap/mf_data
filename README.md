@@ -7,4 +7,12 @@ For Equity Mutual funds the gains up to 100,000 INR is tax free in a Financial Y
 3. However, the LTCG made till 31 January 2018, have been grandfathered, so the gains will remain tax-exempt.
 4. If you have a SIP spanning across multiple years then each cost and sale price has to be calculated individually
 
+## How to use the tool
+1. The frst step is to get the consolidated account statement from CAMS in PDF Format
+2. Convert the PDF to text by cupying the text and pasting it to  text file 
+3. Install the required python version 3.9 and rqequired libraries.
+4. Copy the git hub project to your local machine and execute the python function using command line
+
+
+
 
