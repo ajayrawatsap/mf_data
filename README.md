@@ -5,7 +5,7 @@ For Equity Mutual funds the gains up to 100,000 INR is tax free in a Financial Y
 1. LTCG is applicable for any unit purchased before one year of selling date
 2. LTCG up to 100,000 INR is tax free while above this amount is taxable at 10% 
 3. Grand-Fathered clause, which means if you have an investment before 31-Jan-2018, then cost of acquisition would be  purchase price or NAV on 31-Jan-2018 whichever is higher
-4. If you have a SIP spanning across multiple years then each cost and sale price has to be calculated individually
+4. If you have a SIP spanning across multiple years then each cost price, sale price and LTCG has to be calculated individually for each SIP
 
 ## How to use the tool
 1. The frst step is to get the consolidated account statement from CAMS in PDF Format
