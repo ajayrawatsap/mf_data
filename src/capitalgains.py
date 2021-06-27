@@ -27,14 +27,14 @@ class CapitalGains:
         mf_gf_nav_null =   self.mf_hdr_df[self.mf_hdr_df.gf_nav.isnull()].scheme_name.value_counts().index.to_list()
 
         #Remove transactions for which GF nav is not found
-        self.mf_hdr_df =  self.mf_hdr_df.dropna(subset = ['gf_nav'])
+        # self.mf_hdr_df =  self.mf_hdr_df.dropna(subset = ['gf_nav'])
 
         #Join Transactional and Header data to capture NAV data (Latest naV, GF Nav etc)
         self.mf_trans_df = pd.merge(self.mf_trans_df, self.mf_hdr_df, on ='scheme_name', how = 'inner' )
 
         #Log the Schemes for which GF NAV is missing
         if len(mf_gf_nav_null) > 0:
-            logging.warning(f"Schemes below  are removed as  Grandfathered NAV was not Found")
+            logging.warning(f"For Schemes below Grandfathered NAV was not Found")
             for scheme in mf_gf_nav_null:
                 logging.warning(scheme)
 
@@ -104,7 +104,25 @@ class CapitalGains:
         #Round to 2 decimals
         cols_to_round = ['perc_gain','current_amt','ltcg', 'stcg', 'cumil_ltcg', 'cumil_units']
         self.mf_trans_df[cols_to_round] = self.mf_trans_df[cols_to_round].round(2)   
+   
 
+    def if_gf_nav_ok(self, mf_trans_single_df:pd.DataFrame)->bool:
+        '''
+            In case GF NAV not required because Transaction was done after date 31-Jan-2018  then gf nav is not required: 
+            If there exists transaction before cut off date then gf nav  is required
+        '''
+        # create a dataframe of trasnactions on or before cut off date of 31-Jan-2018
+        gf_cut_off_date = datetime.strptime(ct.GF_NAV_DATE, ct.DATE_FORMAT)
+        mf_trans_before_31_jan_2018 = mf_trans_single_df[mf_trans_single_df.trans_date <= gf_cut_off_date ]
+        
+        # if there exists trasnactions before cut off date GF NAV is required
+        if mf_trans_before_31_jan_2018.shape[0] > 0:
+            # If the sum of new purchase is 0 it means no GrandFathered NAV was found
+            gf_nav_sum = mf_trans_before_31_jan_2018.gf_nav.sum()
+            if  gf_nav_sum == 0:
+                return False
+        
+        return True
 
     def calc_units_to_sell(self,scheme_name:str, target_ltcg:float = 100000)->tuple[float, float,str]:
         '''
@@ -114,9 +132,19 @@ class CapitalGains:
         
         ltcg_amt, units_to_sell = 0, 0 
         mf_trans_single_df = self.mf_trans_df[self.mf_trans_df.scheme_name == scheme_name ]    
+       
+       
+        # if transaction exists before  31-Jan-2018 but no GF nav found, no claculation is possible
+        if not self.if_gf_nav_ok( mf_trans_single_df ):
+            logging.warning(f'For Scheme {scheme_name}: Transaction prior to 31-Jan-2018 exist but no GrandFathered NAV found')  
+            gf_nav_file_name = os.path.join(ct.DATA_DIR, ct.NAV_DIR, ct.GF_NAV_CSV_FILE)
+            msg  =  (  f'Transactions prior to 31-Jan-2018 exist but no GrandFathered NAV found:' 
+                       f'Manualy Maintain the NAV for  date 31-Jan-2018 in file {gf_nav_file_name }' )
+            return 0, 0, msg
+
+
+
         mf_trans_single_df = mf_trans_single_df[mf_trans_single_df.ltcg > 0]
-    
-        
         num_rows = mf_trans_single_df.shape[0]
         # No LTCG found return zero
         if  num_rows == 0:  
