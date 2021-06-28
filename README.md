@@ -13,9 +13,9 @@ For Equity Mutual funds the gains up to 100,000 INR is tax free in a Financial Y
 1. The frst step is to get the [consolidated account statement](https://new.camsonline.com/Investors/Statements/Consolidated-Account-Statement) from CAMS in PDF Format. Make sure that you select the option as highlighted in yellow. ![screenshot](https://github.com/ajayrawatsap/mf_data/blob/master/data/assets/cams.PNG)
 
 3. Convert the PDF to text by copying the text and pasting it to  text file . 
-    It is imortant to note that the pdf file is password protected and copy is not possble by default. 
-    To enable copying open the pdf in chrome browser and then click print button ![print](https://github.com/ajayrawatsap/mf_data/blob/master/data/assets/print_chrome.PNG)
-    Use CTLR+A to select all CTRL+C to copy all text. Paste the text in text file and save file to directory  data/ . Check  [sample_data.txt](/data/sample_data.txt) file, your file should also be in same directory.
+    1. It is imortant to note that the pdf file is password protected and copy is not possble by default. 
+    2. To enable copying open the pdf in chrome browser and then click print button ![print](https://github.com/ajayrawatsap/mf_data/blob/master/data/assets/print_chrome.PNG)
+    3. Use CTLR+A to select all CTRL+C to copy all text. Paste the text in text file and save file to directory  data/ . Check  [sample_data.txt](/data/sample_data.txt) file, your file should also be in same directory.
 5. Install the latest [python](https://www.python.org/downloads/)  version 3.9 and required libraries.
    See [requirements.txt ](/requirements.txt) for additional python libraries required and install them using pip command.
 7. Copy the git hub project to your local machine and execute the python main function using command line by changing path to root folder where main.py file is located.
