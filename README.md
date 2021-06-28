@@ -16,7 +16,7 @@ For Equity Mutual funds the gains up to 100,000 INR is tax free in a Financial Y
     Use CTLR+A to select all CTRL+C to copy all text. Paste the text in text file and save file to directory  mf_data/data/ . See [sample_data.txt](/data/sample_data.txt)
 5. Install the required [python](https://www.python.org/downloads/)  version 3.9 and required libraries.
    See [requirements.txt ](/requirements.txt) for additional python libraries required
-7. Copy the git hub project to your local machine and execute the python main function using command line
+7. Copy the git hub project to your local machine and execute the python main function using command line by changing path to root folder where main.py file is located.
 
 
 ## FAQ
