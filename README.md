@@ -17,6 +17,9 @@ For Equity Mutual funds the gains up to 100,000 INR is tax free in a Financial Y
 5. Install the required [python](https://www.python.org/downloads/)  version 3.9 and required libraries.
    See [requirements.txt ](/requirements.txt) for additional python libraries required
 7. Copy the git hub project to your local machine and execute the python main function using command line by changing path to root folder where main.py file is located.
+8. It will create two ouput files in directory  data/output/
+   (1) output_mf_totals.csv: For each mutual fund scheme it will list the total LTCC, STCG, Percent  Gain and Target units to sell for tax free gains. see sample [output](data/output/output_mf_totals.csv)
+   (2) output_mf_transactions.csv: This will list transaction level details and claculations for LTCG, STCG and gain percent. See sample output[data/output/output_mf_transactions.csv]
 
 
 ## FAQ
