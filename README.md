@@ -11,10 +11,12 @@ For Equity Mutual funds the gains up to 100,000 INR is tax free in a Financial Y
 
 ## How to use the tool
 1. The frst step is to get the [consolidated account statement](https://new.camsonline.com/Investors/Statements/Consolidated-Account-Statement) from CAMS in PDF Format. Make sure that you select the option as highlighted in yellow. ![screenshot](https://github.com/ajayrawatsap/mf_data/blob/master/data/assets/cams.PNG)
-2. Clone the current github rep. See [help](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) for more details
-   '''
+2. Clone the current github rep. See [help](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) for more details. On windows it can be done by opening command prompt tool and runing below commans
+   ```
    git clone https://github.com/ajayrawatsap/mf_data.git
-   '''
+   cd mf_data
+   
+   ```
 
 3. Convert the PDF to text by copying the text and pasting it to  text file . 
     1. It is imortant to note that the pdf file is password protected and copy is not possble by default. 
