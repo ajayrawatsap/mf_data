@@ -39,10 +39,13 @@ For Equity Mutual funds the gains up to 100,000 INR is tax free in a Financial Y
 
 
 ## FAQ
-1. It is assuumed that there are no partial redemptions as the claculations can be wroong
-2. For some MF schemes the calculation may not be possible as the Grandfathred NAV could not be found. To resolve such isssues Mnaully manaintin the GF in CSV File
-3. The calculation would also be done for Debt funds but you should ignore the. Currently its is not possble to differntial between Equity and Debt Schemes
+### Does it work for Partial Redemptions
+  It is assuumed that there are no partial redemptions as the claculations can be wrong
+  
+### Calculations are missing for some schemes  
+2. For some MF schemes the calculation may not be possible as the Grandfathred NAV could not be found. To resolve such issues Manualy manaintin the GF in [CSV File](data/nav/gf_nav_all.csv)
+3. The calculation would also be done for Debt funds but you should ignore it. Currently its is not possble to differentiate between Equity and Debt Schemes
 4. The tool has been tested in Windows 10 OS with python 3.9, but it should also work in linux/linux envirronment
-5. I have not been to find a fool proof way to diectrly convert PDF to text programatically. This is work under process and in future the tool would be able to process PDF file directly
+5. I have not been to find a fool proof way to directly convert PDF to text programatically. This is work under process and in future the tool would be able to process PDF file directly
 6. The limited testing has happened on my own Mutual fund Schemes. In case you encounter bug and issue please report it in issues.
 
