@@ -20,7 +20,7 @@ Date Transaction Amount Units Price Unit
 DSP Mutual Fund
 PAN: RANDOM23D KYC: OK PAN: OK
 D788-DSP Small Cap Fund - Direct Plan - Growth (formerly DSP Micro Cap Fund)(Advisor: DIRECT) Registrar : CAMS
-Folio No: 2355733 / 27
+Folio No: 2765555 / 27
  Opening Unit Balance: 0.000
 05-Jan-2017 Purchase - via Online - DIRECT 60,000.00 1,141.770 52.550 100
 10-Jan-2017 Purchase - via Online - DIRECT 10,000.00 189.584 52.747 300
@@ -39,7 +39,7 @@ Closing Unit Balance: 13,196.649
 HDFC Mutual Fund
 PAN: RANDOM23D KYC: OK PAN: OK
 H44T-HDFC Top 100 Fund - Direct Plan - Growth Option (formerly HDFC Top 200 Fund)(Advisor: DIRECT) Registrar : CAMS
-Folio No: 6813412 / 89
+Folio No: 6776655 / 78
  Opening Unit Balance: 0.000
 24-Mar-2017 ***SIPRegistered***
 11-Apr-2017 Switch-In - From HDFC Top 200 Fund-Growth - via HDFCMFOnline 10,000.00 23.76 420.741 699.152
