@@ -25,11 +25,11 @@ For Equity Mutual funds the gains up to 100,000 INR is tax free in a Financial Y
 5. Install the latest [python](https://www.python.org/downloads/)  version 3.9 and required libraries.
    See [requirements.txt ](/requirements.txt) for additional python libraries required and install them using pip command.
 7. Execute python main function using command line by changing path to root folder where main.py file is located. use the correct file name for your file.
-   1. option1: Calculate units to sell for tax free LTCG of INR 100000
+    option1: Calculate units to sell for tax free LTCG of INR 100000 (default value)
    ```
    python main.py sample_data.txt
    ```
-   1. option2: Calculate units to sell for tax free LTCG of user defined value (INT 50000 in this case)
+    option2: Calculate units to sell for tax free LTCG of user defined value (INR 50000 in this case)
       ```
       python main.py sample_data.txt 50000
       ```
