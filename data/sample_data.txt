@@ -20,7 +20,7 @@ Date Transaction Amount Units Price Unit
 DSP Mutual Fund
 PAN: RANDOM23D KYC: OK PAN: OK
 D788-DSP Small Cap Fund - Direct Plan - Growth (formerly DSP Micro Cap Fund)(Advisor: DIRECT) Registrar : CAMS
-Folio No: 2355733 / 27
+Folio No: 5655444 / 90
  Opening Unit Balance: 0.000
 05-Jan-2017 Purchase - via Online - DIRECT 60,000.00 1,141.770 52.550 100
 10-Jan-2017 Purchase - via Online - DIRECT 10,000.00 189.584 52.747 300
@@ -39,7 +39,7 @@ Closing Unit Balance: 13,196.649
 HDFC Mutual Fund
 PAN: RANDOM23D KYC: OK PAN: OK
 H44T-HDFC Top 100 Fund - Direct Plan - Growth Option (formerly HDFC Top 200 Fund)(Advisor: DIRECT) Registrar : CAMS
-Folio No: 6813412 / 89
+Folio No: 666778 / 90
  Opening Unit Balance: 0.000
 24-Mar-2017 ***SIPRegistered***
 11-Apr-2017 Switch-In - From HDFC Top 200 Fund-Growth - via HDFCMFOnline 10,000.00 23.76 420.741 699.152
@@ -56,7 +56,7 @@ Folio No: 6813412 / 89
 05-Feb-2018 SIP Purchase - Instalment 10/12 10,000.00 20.831 480.051 1,287.164
 05-Mar-2018 SIP Purchase - Instalment 11/12 10,000.00 21.801 458.693 1,308.965
 05-Apr-2018 SIP Purchase - Instalment 12/12 10,000.00 22.078 452.941 1,331.043
-NAV on 17-Jun-2021: INR 661.419 Valuation on 17-Jun-2021: INR 880,377.13
+NAV on 17-Jun-2021: INR 661.419 Valuation on 17-Jun-2021: INR 8377.13
 *Due to change in the Scheme Name and fundamental attributes of HDFC Top 200 Fund w.e.f.  May 23, 2018, the Scheme shall be managed as HDFC Top 100 Fund
 and type of the scheme has been changed to an Open-ended Equity Scheme predominantly investing in large cap stocks - Current Load Structure : Entry Load - Nil.
 Exit Load : 1% if units are redeemed/swtiched-out within 1 year; No Exit Load if units are redeemed /switched-out after 1 year from the date of investment with
