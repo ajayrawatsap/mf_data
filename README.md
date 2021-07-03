@@ -14,7 +14,7 @@ It produces two output files, [Aggregate](data/output/output_mf_totals.csv) file
 
 ## How to use the tool
 1. The frst step is to get the [consolidated account statement](https://www.camsonline.com/Investors/Statements/Consolidated-Account-Statement) from CAMS in PDF Format. Make sure that you select the option as highlighted in yellow. ![screenshot](https://github.com/ajayrawatsap/mf_data/blob/master/data/assets/cams.PNG)
-2. Clone the current github rep. See [help](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) for more details. On windows it can be done by opening command prompt tool and runing below commans
+2. Clone the current github rep. See [help](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) for more details. On windows it can be done by opening command prompt tool and runing below commands
    ```
    git clone https://github.com/ajayrawatsap/mf_data.git
    cd mf_data
@@ -28,6 +28,7 @@ It produces two output files, [Aggregate](data/output/output_mf_totals.csv) file
 5. Install the latest [python](https://www.python.org/downloads/)  version 3.9 and required libraries.
    See [requirements.txt ](/requirements.txt) for additional python libraries required and install them using pip command.
 7. Execute python main function using command line. Make sure you are executing from path wheere main.py file is located. Use the correct file name for your file.
+    <br>
     <br>option1: Calculate units to sell for tax free LTCG of INR 100000 (default value)
    ```
    python main.py sample_data.txt
