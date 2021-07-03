@@ -28,11 +28,11 @@ It produces two output files, [Aggregate](data/output/output_mf_totals.csv) file
 5. Install the latest [python](https://www.python.org/downloads/)  version 3.9 and required libraries.
    See [requirements.txt ](/requirements.txt) for additional python libraries required and install them using pip command.
 7. Execute python main function using command line. Make sure you are executing from path wheere main.py file is located. Use the correct file name for your file.
-    option1: Calculate units to sell for tax free LTCG of INR 100000 (default value)
+    <br>option1: Calculate units to sell for tax free LTCG of INR 100000 (default value)
    ```
    python main.py sample_data.txt
    ```
-    option2: Calculate units to sell for tax free LTCG of user defined value (INR 50000 in this case)
+    <br>option2: Calculate units to sell for tax free LTCG of user defined value (INR 50000 in this case)
       ```
       python main.py sample_data.txt 50000
       ```
