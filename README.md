@@ -27,7 +27,7 @@ It produces two output files, [Aggregate](data/output/output_mf_totals.csv) file
     3. Use CTLR+A to select all CTRL+C to copy all text. Paste the text in text file and save file to directory  data/ . Check  [sample_data.txt](/data/sample_data.txt) file, your file should also be in same directory.
 5. Install the latest [python](https://www.python.org/downloads/)  version 3.9 and required libraries.
    See [requirements.txt ](/requirements.txt) for additional python libraries required and install them using pip command.
-7. Execute python main function using command line. Make sure you are executing from path wheere main.py file is located. Use the correct file name for your file.
+7. Execute python main function using command line. Make sure you are executing from path where main.py file is located. Use the correct file name for your file.
     <br>
     <br>option1: Calculate units to sell for tax free LTCG of INR 100000 (default value)
    ```
@@ -49,9 +49,9 @@ It produces two output files, [Aggregate](data/output/output_mf_totals.csv) file
 #### Calculations are missing for some schemes  
 For some MF schemes the calculation may not be possible as the Grandfathred NAV could not be found in CSV file. To resolve such issues Manualy maintain the Grand Fathered NAV(for date 31.01.2018)  in [CSV File](data/nav/gf_nav_all.csv)
  #### Why Calculations are also done for Debt Funds  
-  The calculation would also be done for Debt funds but you should ignore it as LTCG for debt funds are calcuated differently. Currently its is not possble to differentiate between Equity and Debt Schemes
+  The calculation would also be done for Debt funds but you should ignore it as LTCG for debt funds are calcuated differently. Currently its is not possible to differentiate between Equity and Debt Schemes
 #### On Which OS can the tool run
-  The tool has been tested in Windows 10 OS with python 3.9, but it should also work in linux/mac envirronment
+  The tool has been tested in Windows 10 OS with python 3.9, but it should also work in linux/mac environment
 #### Why can't I directly use pdf file as input
  I have not been to find a fool proof way to directly convert PDF to text programatically. This is work under process and in future the tool would be able to process PDF file directly. Any suggestions and help is welcome
 #### It does not work correctly for my schemes
