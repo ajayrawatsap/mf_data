@@ -9,6 +9,9 @@ For Equity Mutual funds the gains up to 100,000 INR is tax free in a Financial Y
 3. Grand-Fathered clause, which means if you have an investment before 31-Jan-2018, then cost of acquisition would be  purchase price or NAV on 31-Jan-2018 whichever is higher
 4. If you have a SIP spanning across multiple years then each cost price, sale price and LTCG has to be calculated individually for each SIP
 
+The input to this tool is text file containing all transactions. See [sample_data.txt](/data/sample_data.txt). 
+It produces two output files, [Aggregate](data/output/output_mf_totals.csv) file at scheme level and [Transaction](data/output/output_mf_transactions.csv) file.
+
 ## How to use the tool
 1. The frst step is to get the [consolidated account statement](https://new.camsonline.com/Investors/Statements/Consolidated-Account-Statement) from CAMS in PDF Format. Make sure that you select the option as highlighted in yellow. ![screenshot](https://github.com/ajayrawatsap/mf_data/blob/master/data/assets/cams.PNG)
 2. Clone the current github rep. See [help](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) for more details. On windows it can be done by opening command prompt tool and runing below commans
@@ -43,7 +46,7 @@ For Equity Mutual funds the gains up to 100,000 INR is tax free in a Financial Y
   It is assuumed that there are no partial redemptions as the claculations can be wrong
   
 #### Calculations are missing for some schemes  
-2. For some MF schemes the calculation may not be possible as the Grandfathred NAV could not be found. To resolve such issues Manualy manaintin the GF in [CSV File](data/nav/gf_nav_all.csv)
+2. For some MF schemes the calculation may not be possible as the Grandfathred NAV could not be found. To resolve such issues Manualy manaintin the Grand Fathered NAV(for date 31.01.2018)  in [CSV File](data/nav/gf_nav_all.csv)
  #### Calculations are also done for Debt Funds  
   The calculation would also be done for Debt funds but you should ignore it. Currently its is not possble to differentiate between Equity and Debt Schemes
 #### On Which OS can the tool run
