@@ -9,8 +9,10 @@ For Equity Mutual funds the gains up to 100,000 INR is tax free in a Financial Y
 3. Grand-Fathered clause, which means if you have an investment before 31-Jan-2018, then cost of acquisition would be  purchase price or NAV on 31-Jan-2018 whichever is higher
 4. If you have a SIP spanning across multiple years then each cost price, sale price and LTCG has to be calculated individually for each SIP
 
-The input to this tool is text file containing all transactions. See [sample_data.txt](/data/sample_data.txt). 
-It produces two output files, [Aggregate](data/output/output_mf_totals.csv) file at scheme level and [Transaction](data/output/output_mf_transactions.csv) file.
+The input to this tool is PDF File from CAMS containing all transactions for a period.
+It produces two output files, [Aggregate](mf_data/data/output/sample_output_mf_totals.csv) file at scheme level and [Transaction](mf_data/data/output/sample_output_mf_transactions.csv) file.
+![sample_output_hdr](mf_data/data/assets/sample_ouput.PNG)
+
 
 ## How to use the tool
 1. The frst step is to get the [consolidated account statement](https://www.camsonline.com/Investors/Statements/Consolidated-Account-Statement) from CAMS in PDF Format. Make sure that you select the option as highlighted in yellow. ![screenshot](https://github.com/ajayrawatsap/mf_data/blob/master/data/assets/cams.PNG)
