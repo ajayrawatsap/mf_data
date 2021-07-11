@@ -11,6 +11,7 @@ For Equity Mutual funds the gains up to 100,000 INR is tax free in a Financial Y
 
 The input to this tool is PDF File from CAMS containing all transactions for a period.
 It produces two output files, [Aggregate](mf_data/data/output/sample_output_mf_totals.csv) file at scheme level and [Transaction](mf_data/data/output/sample_output_mf_transactions.csv) file.
+
 ![sample_output_hdr](mf_data/data/assets/sample_ouput.PNG)
 
 
