@@ -41,7 +41,7 @@ It produces two output files, [Aggregate](data/output/sample_output/sample_outpu
       ```
        python main.py cams_june_27.pdf password 50000
       ```
-9. It will create two ouput files in directory  data/output/
+9. It will create two output files in directory  data/output/
     1. output_mf_totals.csv: For each mutual fund scheme it will list the total LTCG, STCG, Percent  Gain and Target units to sell for tax free gains. Check sample [output](data/output/sample_output/sample_output_mf_totals.csv) file
     1. output_mf_transactions.csv: This will list transaction level details and claculations for LTCG, STCG and gain percent. Check  sample [output](data/output/sample_output/sample_output_mf_transactions.csv) file.
 
