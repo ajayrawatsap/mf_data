@@ -26,7 +26,7 @@ It produces two output files, [Aggregate](mf_data/data/output/sample_output_mf_t
    cd mf_data
    ```
 
-3. Copy  the PDF file to  **mf_data/data/** folder of repo you downloaded in step 2
+3. Copy  the PDF file to  *mf_data/data/* folder of repo you downloaded in step 2
    
 5. Install the latest [python](https://www.python.org/downloads/)  version 3.9 and required libraries.
    See [requirements.txt ](/requirements.txt) for additional python libraries required and install them using pip command.
