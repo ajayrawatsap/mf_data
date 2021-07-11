@@ -1,0 +1,4 @@
+amc,folio_no,scheme_name,isin,scheme_code,latest_nav,latest_nav_date,gf_nav,amount,units,ltcg,stcg,current_amt,perc_gain,target_ltcg,target_units,comments
+DSP Mutual Fund,1234,DSP Small Cap Fund - Direct Plan - Growth,INF740K01QD1,119212,98.639,25-06-2021,70.163,300000,4275.757878,220000.45,100000,450000,50.34,100000,3511.729,Sell 3511.729 units for LTCG of  100000.000
+Mirae Asset Mutual Fund,2345,Mirae Asset Large Cap Fund - Direct Plan - Growth,INF769K01AX2,118825,77.536,25-06-2021,51.799,400000,324.56,320000.89,0,1381680.51,53.52,100000,3508.403,Sell 3508.403 units for LTCG of  100000.000
+Mirae Asset Mutual Fund,6788,Mirae Asset Tax Saver Fund - Direct Growth,INF769K01DM9,135781,30.603,25-06-2021,17.787,60000,2456.678,0,15184.727,75181.717,25.309,0,0,No LTCG exists hence calculation is not applicable
