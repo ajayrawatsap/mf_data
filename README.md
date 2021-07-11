@@ -15,6 +15,9 @@ It produces two output files, [Aggregate](data/output/sample_output/sample_outpu
 ![sample_output_hdr](https://github.com/ajayrawatsap/mf_data/blob/master/data/assets/sample_ouput.PNG)
 
 
+A big thanks to team responsible for maintaining [casparser](https://github.com/codereverser/casparser) package which is used to parse CAM Pdf satatment.
+
+
 ## How to use the tool
 1. The frst step is to get the [consolidated account statement](https://www.camsonline.com/Investors/Statements/Consolidated-Account-Statement) from CAMS in PDF Format. Make sure that you select the option as highlighted in yellow. ![screenshot](https://github.com/ajayrawatsap/mf_data/blob/master/data/assets/cams.PNG)
 2. Clone the current github repo. See [help](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) for more details. On windows it can be done by opening command prompt tool and runing below commands
@@ -67,5 +70,4 @@ The tool has been tested in Windows 10 OS with python 3.9, but it should also wo
 directly. Any suggestions and help is welcome
 #### It does not work correctly for my schemes
  The limited testing has happened on my own Mutual fund Schemes. In case you encounter bug and issue please report it in issues. 
- 
 
