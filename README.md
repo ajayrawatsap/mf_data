@@ -30,9 +30,10 @@ It produces two output files, [Aggregate](mf_data/data/output/sample_output_mf_t
    
 5. Install the latest [python](https://www.python.org/downloads/)  version 3.9 and required libraries.
    See [requirements.txt ](/requirements.txt) for additional python libraries required and install them using pip command.
-7. Execute python main function using command line. Make sure you are executing from path where main.py file is located. Use the correct file name for your file.
+7. Execute python main function using command line. Make sure you are executing from path where main.py file is located. 
     <br>
     <br>option1: Calculate units to sell for tax free LTCG of INR 100000 (default value). 
+    <br> cams_june_27.pdf is the name of PDF file in data directory and password the password for the pdf file. Use the correct file name and password for your file.
    ```
    python main.py cams_june_27.pdf password
    ```
