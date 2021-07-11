@@ -37,12 +37,12 @@ It produces two output files, [Aggregate](data/output/sample_output/sample_outpu
    ```
 5. Execute python main function using command line. Make sure you are executing from path where main.py file is located. 
     <br>
-    <br>option1: Calculate units to sell for tax free LTCG of INR 100000 (default value). 
+    <br>**Option 1:** Calculate units to sell for tax free LTCG of INR 100000 (default value). 
     <br> cams_june_27.pdf is the name of PDF file in data directory and password the password for the pdf file. Use the correct file name and password for your file.
    ```
    python main.py cams_june_27.pdf password
    ```
-    <br>option2: Calculate units to sell for tax free LTCG of user defined value (INR 50000 in this case)
+    <br>**Option2:** Calculate units to sell for tax free LTCG of user defined value (INR 50000 in this case)
       ```
        python main.py cams_june_27.pdf password 50000
       ```
