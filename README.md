@@ -26,25 +26,23 @@ It produces two output files, [Aggregate](mf_data/data/output/sample_output_mf_t
    cd mf_data
    ```
 
-3. Convert the PDF to text by copying the text and pasting it to  text file . 
-    1. It is imortant to note that the pdf file is password protected and copy is not possble by default. 
-    2. To enable copying open the pdf in chrome browser and then click print button ![print](https://github.com/ajayrawatsap/mf_data/blob/master/data/assets/print_chrome.PNG)
-    3. Use CTLR+A to select all CTRL+C to copy all text. Paste the text in text file and save file to directory  data/ . Check  [sample_data.txt](/data/sample_data.txt) file, your file should also be in same directory.
+3. Copy  the PDF file to mf_data/data/ folder of repo you downloaded in step 2
+   
 5. Install the latest [python](https://www.python.org/downloads/)  version 3.9 and required libraries.
    See [requirements.txt ](/requirements.txt) for additional python libraries required and install them using pip command.
 7. Execute python main function using command line. Make sure you are executing from path where main.py file is located. Use the correct file name for your file.
     <br>
-    <br>option1: Calculate units to sell for tax free LTCG of INR 100000 (default value)
+    <br>option1: Calculate units to sell for tax free LTCG of INR 100000 (default value). 
    ```
-   python main.py sample_data.txt
+   python main.py cams_june_27.pdf password
    ```
     <br>option2: Calculate units to sell for tax free LTCG of user defined value (INR 50000 in this case)
       ```
-      python main.py sample_data.txt 50000
+       python main.py cams_june_27.pdf password 50000
       ```
 9. It will create two ouput files in directory  data/output/
-    1. output_mf_totals.csv: For each mutual fund scheme it will list the total LTCG, STCG, Percent  Gain and Target units to sell for tax free gains. Check sample [output](data/output/output_mf_totals.csv) file
-    1. output_mf_transactions.csv: This will list transaction level details and claculations for LTCG, STCG and gain percent. Check  sample [output](data/output/output_mf_transactions.csv) file.
+    1. output_mf_totals.csv: For each mutual fund scheme it will list the total LTCG, STCG, Percent  Gain and Target units to sell for tax free gains. Check sample [output](mf_data/data/output/sample_output_mf_totals.csv) file
+    1. output_mf_transactions.csv: This will list transaction level details and claculations for LTCG, STCG and gain percent. Check  sample [output](mf_data/data/output/sample_output_mf_transactions.csv) file.
 
 
 ## FAQ
