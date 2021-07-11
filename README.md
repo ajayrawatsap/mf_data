@@ -15,7 +15,7 @@ It produces two output files, [Aggregate](data/output/sample_output/sample_outpu
 ![sample_output_hdr](https://github.com/ajayrawatsap/mf_data/blob/master/data/assets/sample_ouput.PNG)
 
 
-A big thanks to team responsible for maintaining [casparser](https://github.com/codereverser/casparser) package which is used to parse CAM Pdf satatment.
+A big thanks to team responsible for maintaining [casparser](https://github.com/codereverser/casparser) package which is used to parse CAMS CAS pdf satatement.
 
 
 ## How to use the tool
