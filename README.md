@@ -54,6 +54,9 @@ It produces two output files, [Aggregate](data/output/sample_output/sample_outpu
 ## FAQ
 #### Does it work for Partial Redemptions
   It is assuumed that there are no partial redemptions as the claculations can be wrong. This will be supported in Future
+ #### How is Latest NAV and GrandFathered NAV fecthed 
+ Latest NAV is fetched from the CAMS statement itself, therefore if you need to have latest calculation use the latest CAMS statement .
+ GrandFathered NAV is fecthed from [AMFI website](https://www.amfiindia.com/nav-history-download)  for date 31-JAN-2018 and list has been parsed and downloaded in [csv file](data/nav/gf_nav_all.csv)
   
 #### Calculations are missing for some schemes  
 For some MF schemes the calculation may not be possible as the Grandfathred NAV could not be found in CSV file. To resolve such issues Manualy maintain the Grand Fathered NAV(for date 31.01.2018)  in [CSV File](data/nav/gf_nav_all.csv)
