@@ -1,6 +1,6 @@
 # Mutual Funds Capital Gains
 
-[![PyPI pyversions](https://img.shields.io/pypi/pyversions/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
+[![Generic badge](https://img.shields.io/badge/python-3.9-<COLOR>.svg)](https://shields.io/)
 
 This aim of this project is to calculate number of units required to sell an Equity Mutual Fund so that LTCG (Long-term capital gains) is tax Free. 
 <br>This would be initially a command line tool based on python script. 
