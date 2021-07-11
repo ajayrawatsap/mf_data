@@ -6,6 +6,7 @@ import src.constants as ct
 
 from datetime import datetime
 from collections import defaultdict
+from decimal import Decimal
 from dateutil.relativedelta import relativedelta
 
 class CapitalGains:
@@ -19,9 +20,18 @@ class CapitalGains:
         self._calculate_capital_gains()
 
     def _set_gf_nav(self):
+
+        def decimal_from_value(value:float)->Decimal:
+            return Decimal(value)
         logging.debug(f"Setting Grandfathered NAV for all Schemes for NAV date 18-JAN-2018")
-        gf_nav_df = pd.read_csv(os.path.join(ct.DATA_DIR, ct.NAV_DIR, ct.GF_NAV_CSV_FILE))
-        self.mf_hdr_df = pd.merge( self.mf_hdr_df, gf_nav_df, on ='scheme_name', how = 'left')
+
+        #Set GF Nav on MF Header Data
+        gf_nav_df = pd.read_csv(  os.path.join(ct.DATA_DIR, ct.NAV_DIR, ct.GF_NAV_CSV_FILE),
+                                  converters= {'gf_nav': decimal_from_value} )
+        # self.mf_hdr_df = pd.merge( self.mf_hdr_df, gf_nav_df, on ='scheme_name', how = 'left')\
+        gf_nav_df = gf_nav_df[['scheme_code', 'gf_nav']]
+        gf_nav_df['scheme_code'] = gf_nav_df['scheme_code'].astype(str)
+        self.mf_hdr_df = pd.merge( self.mf_hdr_df, gf_nav_df, on ='scheme_code', how = 'left')
 
         #MF Schemes for which GF Nav was not found
         mf_gf_nav_null =   self.mf_hdr_df[self.mf_hdr_df.gf_nav.isnull()].scheme_name.value_counts().index.to_list()
@@ -79,7 +89,7 @@ class CapitalGains:
         #if transaction date is before Jan-2018 use grand fathered NAV else use current NAV for calculating capital gains
         self.mf_trans_df['new_purch_nav'] = self.mf_trans_df.apply(lambda x: 
                                                                    self._get_new_purch_nav(x.trans_date, 
-                                                                                           x.unit_price, 
+                                                                                           x.purch_nav, 
                                                                                            x.gf_nav ), 
                                                                     axis = 1)
 
@@ -102,8 +112,8 @@ class CapitalGains:
         self.mf_trans_df['perc_gain'] =   ((self.mf_trans_df['current_amt'] - self.mf_trans_df['amount']) /  self.mf_trans_df['amount']) * 100
 
         #Round to 2 decimals
-        cols_to_round = ['perc_gain','current_amt','ltcg', 'stcg', 'cumil_ltcg', 'cumil_units']
-        self.mf_trans_df[cols_to_round] = self.mf_trans_df[cols_to_round].round(2)   
+        # cols_to_round = ['perc_gain','current_amt','ltcg', 'stcg', 'cumil_ltcg', 'cumil_units']
+        # self.mf_trans_df[cols_to_round] = self.mf_trans_df[cols_to_round].round(2)   
    
 
     def if_gf_nav_ok(self, mf_trans_single_df:pd.DataFrame)->bool:
@@ -112,7 +122,7 @@ class CapitalGains:
             If there exists transaction before cut off date then gf nav  is required
         '''
         # create a dataframe of trasnactions on or before cut off date of 31-Jan-2018
-        gf_cut_off_date = datetime.strptime(ct.GF_NAV_DATE, ct.DATE_FORMAT)
+        gf_cut_off_date = datetime.strptime(ct.GF_NAV_DATE, ct.DATE_FORMAT).date()
         mf_trans_before_31_jan_2018 = mf_trans_single_df[mf_trans_single_df.trans_date <= gf_cut_off_date ]
         
         # if there exists trasnactions before cut off date GF NAV is required
@@ -156,8 +166,8 @@ class CapitalGains:
         if mf_trans_single_df.iloc[-1].cumil_ltcg < target_ltcg:  
             units_to_sell = mf_trans_single_df.iloc[-1].cumil_units
             ltcg_amt = mf_trans_single_df.iloc[-1].cumil_ltcg
-            logging.info(f'For Scheme {scheme_name} Total LTCG {ltcg_amt} is less than target LTCG {target_ltcg}: Sell {units_to_sell:.2f} units for LTCG of {ltcg_amt}') 
-            msg = f'Total LTCG {ltcg_amt} is less than target LTCG {target_ltcg}: Sell {units_to_sell:.2f} units for LTCG of {ltcg_amt}'
+            logging.info(f'For Scheme {scheme_name} Total LTCG {ltcg_amt: .3f} is less than target LTCG {target_ltcg}: Sell {units_to_sell:.2f} units for LTCG of {ltcg_amt: .3f}') 
+            msg = f'Total LTCG {ltcg_amt: .3f} is less than target LTCG {target_ltcg}: Sell {units_to_sell:.3f} units for LTCG of {ltcg_amt: .3f}'
             return ltcg_amt, units_to_sell, msg
         # Calculate using cumilative data
         for i in range(0, num_rows):      
@@ -176,8 +186,8 @@ class CapitalGains:
                     delta_units=  delta_ltcg / (row.latest_nav - row.new_purch_nav	)	
                     units_to_sell =   delta_units + prev_row.cumil_units
                     ltcg_amt =  prev_row.cumil_ltcg +    delta_units *(row.latest_nav - row.new_purch_nav)     
-                    logging.info(f'For Scheme {scheme_name}: Sell {units_to_sell:.2f} units for LTCG of {ltcg_amt}')  
-                    msg =   f'Sell {units_to_sell:.2f} units for LTCG of {ltcg_amt}'
+                    logging.info(f'For Scheme {scheme_name}: Sell {units_to_sell:.3f} units for LTCG of {ltcg_amt: .3f}')  
+                    msg =   f'Sell {units_to_sell:.3f} units for LTCG of {ltcg_amt: .3f}'
                     return ltcg_amt, round(units_to_sell, 3), msg
     
     def prepare_final_data(self,target_ltcg:float)->None:
@@ -208,7 +218,7 @@ class CapitalGains:
             'stcg': pd.NamedAgg(column= 'stcg', aggfunc = 'sum'),
             'current_amt': pd.NamedAgg(column= 'current_amt', aggfunc = 'sum') }
         mf_trans_grp_df = self.mf_trans_df.groupby('scheme_name').agg(**agg).reset_index()
-        mf_trans_grp_df['perc_gain'] =   round( ((mf_trans_grp_df['current_amt'] - mf_trans_grp_df['amount']) /  mf_trans_grp_df['amount']) * 100, 2)
+        mf_trans_grp_df['perc_gain'] =   (mf_trans_grp_df['current_amt'] - mf_trans_grp_df['amount']) /  mf_trans_grp_df['amount'] * 100
 
         # Merge all header data
         self.mf_hdr_df = pd.merge(self.mf_hdr_df, mf_trans_grp_df, on ='scheme_name', how = 'left' )
@@ -219,13 +229,21 @@ class CapitalGains:
         self.output_trans_df = self.mf_trans_df.copy()
 
     
-        # Convert Dates to DD-MMM-YYYY Format
-        self.output_hdr_df['latest_nav_date'] = self.output_hdr_df['latest_nav_date'].dt.strftime(ct.DATE_FORMAT)
+        # # Convert Dates to DD-MMM-YYYY Format
+        # self.output_hdr_df['latest_nav_date'] = self.output_hdr_df['latest_nav_date'].dt.strftime(ct.DATE_FORMAT)
 
        
 
-        for col in ['trans_date', 'latest_nav_date']:
-            self.output_trans_df[col] =  self.output_trans_df[col].dt.strftime(ct.DATE_FORMAT)
+        # for col in ['trans_date', 'latest_nav_date']:
+        #     self.output_trans_df[col] =  self.output_trans_df[col].dt.strftime(ct.DATE_FORMAT)
+        
+        #Round to 3 decimals : Need to convert Decimal to Float before rounding else does not work  
+        cols_to_round = ['ltcg',	'stcg',	'current_amt',	'perc_gain',	'target_ltcg']
+        self.output_hdr_df[cols_to_round] = self.output_hdr_df[cols_to_round].astype(float).round(3)   
+        
+
+        cols_to_round  = ['ltcg', 'stcg','cumil_ltcg',	'cumil_units',	'current_amt',	'perc_gain']
+        self.output_trans_df[cols_to_round] = self.output_trans_df[cols_to_round].astype(float).round(3)   
 
         #Write to File
         out_hdr_file = os.path.join(ct.DATA_DIR, ct.OUT_DIR, ct.OUT_FILE_HDR)
