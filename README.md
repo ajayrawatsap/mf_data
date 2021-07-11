@@ -19,9 +19,11 @@ It produces two output files, [Aggregate](mf_data/data/output/sample_output_mf_t
 1. The frst step is to get the [consolidated account statement](https://www.camsonline.com/Investors/Statements/Consolidated-Account-Statement) from CAMS in PDF Format. Make sure that you select the option as highlighted in yellow. ![screenshot](https://github.com/ajayrawatsap/mf_data/blob/master/data/assets/cams.PNG)
 2. Clone the current github repo. See [help](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) for more details. On windows it can be done by opening command prompt tool and runing below commands
    ```
-   git clone https://github.com/ajayrawatsap/mf_data.git
-   cd mf_data
+   git clone https://github.com/ajayrawatsap/mf_data.git  
    
+   ```
+   ```
+   cd mf_data
    ```
 
 3. Convert the PDF to text by copying the text and pasting it to  text file . 
