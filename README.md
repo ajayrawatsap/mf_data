@@ -30,6 +30,11 @@ It produces two output files, [Aggregate](data/output/sample_output/sample_outpu
    
 5. Install the latest [python](https://www.python.org/downloads/)  version 3.9 and required libraries.
    See [requirements.txt ](/requirements.txt) for additional python libraries required and install them using pip command. For additional info on installing packages see     [documentation](https://docs.python.org/3/installing/index.html)
+   
+   <br> for example to install a version of package menttioned in [requirements.txt ](/requirements.txt)
+   '''
+   python -m pip install SomePackage==1.0.4    # specific version
+   '''
 7. Execute python main function using command line. Make sure you are executing from path where main.py file is located. 
     <br>
     <br>option1: Calculate units to sell for tax free LTCG of INR 100000 (default value). 
