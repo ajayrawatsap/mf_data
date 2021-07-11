@@ -28,14 +28,14 @@ It produces two output files, [Aggregate](data/output/sample_output/sample_outpu
 
 3. Copy  the PDF file to  *mf_data/data/* folder of repo you downloaded in step 2
    
-5. Install the latest [python](https://www.python.org/downloads/)  version 3.9 and required libraries.
+4. Install the latest [python](https://www.python.org/downloads/)  version 3.9 and required libraries.
    See [requirements.txt ](/requirements.txt) for additional python libraries required and install them using pip command. For additional info on installing packages see     [documentation](https://docs.python.org/3/installing/index.html)
    
-   <br> for example to install a version of package menttioned in [requirements.txt ](/requirements.txt)
+   <br> For example to install a version of package mentioned in [requirements.txt ](/requirements.txt)
    ```
    python -m pip install SomePackage==1.0.4    # specific version
    ```
-7. Execute python main function using command line. Make sure you are executing from path where main.py file is located. 
+5. Execute python main function using command line. Make sure you are executing from path where main.py file is located. 
     <br>
     <br>option1: Calculate units to sell for tax free LTCG of INR 100000 (default value). 
     <br> cams_june_27.pdf is the name of PDF file in data directory and password the password for the pdf file. Use the correct file name and password for your file.
@@ -46,7 +46,7 @@ It produces two output files, [Aggregate](data/output/sample_output/sample_outpu
       ```
        python main.py cams_june_27.pdf password 50000
       ```
-9. It will create two output files in directory  data/output/
+6. It will create two output files in directory  data/output/
     1. output_mf_totals.csv: For each mutual fund scheme it will list the total LTCG, STCG, Percent  Gain and Target units to sell for tax free gains. Check sample [output](data/output/sample_output/sample_output_mf_totals.csv) file
     1. output_mf_transactions.csv: This will list transaction level details and claculations for LTCG, STCG and gain percent. Check  sample [output](data/output/sample_output/sample_output_mf_transactions.csv) file.
 
