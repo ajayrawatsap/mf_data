@@ -64,9 +64,13 @@ class CapitalGains:
         return ltcg, stcg
 
     def _get_new_purch_nav(self,trans_date: datetime, price:float,  gf_nav:float ) -> float:
+        '''
         #Return the New Purchase NAV based on transaction date
+        for transaction earlier than 31-JAN-2018, the new purchase NAV is max of gf_nav or 
+        for transaction later than 31-JAN-2018, the new purchase NAV is same as purchase nav
+        '''
         if trans_date <= pd.to_datetime(ct.GF_NAV_DATE, format= ct.DATE_FORMAT):
-            return gf_nav
+            return max(gf_nav,price )
         elif trans_date > pd.to_datetime(ct.GF_NAV_DATE, format= ct.DATE_FORMAT):
             return price    
 
