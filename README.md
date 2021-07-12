@@ -36,11 +36,10 @@ A big thanks to team responsible for maintaining [casparser](https://github.com/
 3. Copy  the PDF file to  *mf_data/data/* folder of repo you downloaded in step 2
    
 4. Install the latest [python](https://www.python.org/downloads/)  version 3.9 and required libraries.
-   See [requirements.txt ](/requirements.txt) for additional python libraries required and install them using pip command. For additional info on installing packages see     [documentation](https://docs.python.org/3/installing/index.html)
-   
-   <br> For example to install a version of package mentioned in [requirements.txt ](/requirements.txt)
+
+   See [requirements.txt ](/requirements.txt) for additional python libraries required and install them using pip command below.
    ```
-   python -m pip install SomePackage==1.0.4    # specific version
+   pip install -r requirements.txt
    ```
 5. Execute python main function using command line. Make sure you are executing from path where main.py file is located. 
     <br>
