@@ -28,7 +28,9 @@ A big thanks to team responsible for maintaining [casparser](https://github.com/
 
    ![bindrr_start](data/assets/binder_start.PNG)
  
-3. After sucessfull creation of VM you will see web based file structure as shown
+3. After sucessfull creation of VM you will see web based file structure as shown. 
+This creates new instances of VM every time and only you can see and edit files. 
+
    ![web_view](data/assets/binder_folder.PNG)
    
 4. Upload your CAS statement downloaded in step 1 and save it as  cas.pdf in root directory as shown
@@ -41,7 +43,7 @@ A big thanks to team responsible for maintaining [casparser](https://github.com/
    ![pass](data/assets/pass_input.PNG)
      
 7. The script will run and show the results with Header and Transaction data and will also show you number of units required for tax free LTCG.
-   Plese note the VM session remains active only for a small amount time after which it gets deleted. Launch [Binder](https://mybinder.org/v2/gh/ajayrawatsap/mf_data/HEAD) again to restart prrocess
+   Plese note the VM session remains active only for a small amount time and after inactivity, it gets deleted. Launch [Binder](https://mybinder.org/v2/gh/ajayrawatsap/mf_data/HEAD) again to restart prrocess
  ![output](data/assets/demo_output.png)
 
 
