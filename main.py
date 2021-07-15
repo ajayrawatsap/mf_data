@@ -8,7 +8,7 @@ from src.capitalgains import CapitalGains
 import argparse
 
 # def main(file_name:str, display_logs ='yes', target_ltcg:float = 100000.00 ):
-def main(display_logs ='yes'):
+def main(display_logs ='no'):
   
     parser = argparse.ArgumentParser()
     parser.add_argument("file_name", help="Name of CAMS PDF file stored in data directory", type = str)
