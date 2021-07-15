@@ -1,6 +1,8 @@
 # Mutual Funds Capital Gains
 
 [![Generic badge](https://img.shields.io/badge/python-3.9-<COLOR>.svg)](https://shields.io/)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ajayrawatsap/mf_data/HEAD)
+
 
 
 The aim of this project is to calculate number of units required to sell an Equity Mutual Fund so that LTCG (Long-term capital gains) is tax Free. 
@@ -21,8 +23,19 @@ It produces two output files, [Aggregate](data/output/sample_output/sample_outpu
 
 A big thanks to team responsible for maintaining [casparser](https://github.com/codereverser/casparser) package which is used to parse CAMS CAS pdf satatement.
 
+## Using Tool with Cloud Environment
+**This is easy to use process as no local installation is requireed and is based on cloud based virtual machines with required dependencies alresday installed**
+1. The frst step is to get the [consolidated account statement](https://www.camsonline.com/Investors/Statements/Consolidated-Account-Statement) from CAMS in PDF Format. Make sure that you select the option as highlighted in yellow. ![screenshot](https://github.com/ajayrawatsap/mf_data/blob/master/data/assets/cams.PNG)
+2. Launch  [Binder](https://mybinder.org/v2/gh/ajayrawatsap/mf_data/HEAD). This will create a cloud VM and install all python dependencies and create a Jupyter Notebook to run the scripts. This may take upto 1 one minute.
+3. After sucessfull creation of VM you will see web based file strcuture as shown
+4. Upload your CAS statement downloaded in step 1 and save it as  cas.pdf in root directory as shown
+5. Launch python notebook demo.ipynb from the web repo, it will open in a new browser window tab
+6. Input the password in the input box and press ENTER
+7. The script will run and show the results with Header and Tranasaction data and will also show you number of units required for tax free LTCC
 
-## How to use the tool
+
+## Using Tool in Local Environment
+**This is recommended for advanced users who can install python libraries and use command line tools**
 1. The frst step is to get the [consolidated account statement](https://www.camsonline.com/Investors/Statements/Consolidated-Account-Statement) from CAMS in PDF Format. Make sure that you select the option as highlighted in yellow. ![screenshot](https://github.com/ajayrawatsap/mf_data/blob/master/data/assets/cams.PNG)
 2. Clone the current github repo. See [help](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) for more details. On windows it can be done by opening command prompt tool and runing below commands
    ```
