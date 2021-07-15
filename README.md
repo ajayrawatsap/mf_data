@@ -29,7 +29,7 @@ A big thanks to team responsible for maintaining [casparser](https://github.com/
    ![bindrr_start](data/assets/binder_start.PNG)
  
 3. After sucessfull creation of VM you will see web based file structure as shown. 
-This creates new instances of VM every time and only you can see and edit files. 
+This creates new instance of VM unique to your session and only you can see and edit files. 
 
    ![web_view](data/assets/binder_folder.PNG)
    
