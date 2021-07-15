@@ -25,7 +25,7 @@ A big thanks to team responsible for maintaining [casparser](https://github.com/
 **This is easy to use process as no local installation is required and is based on cloud virtual machines with required dependencies already installed**
 1. The first step is to get the [consolidated account statement](https://www.camsonline.com/Investors/Statements/Consolidated-Account-Statement) from CAMS in PDF Format. Make sure that you select the option as highlighted in yellow. ![screenshot](https://github.com/ajayrawatsap/mf_data/blob/master/data/assets/cams.PNG)
 2. Launch  [Binder](https://mybinder.org/v2/gh/ajayrawatsap/mf_data/HEAD). This will create a cloud VM and install all python dependencies and create a Jupyter Notebook to run the scripts. 
-This may take 10 seconds to one minute depending on soure VM image exist or not.
+This may take 10 seconds to one minute depending on source VM image exist or not on server.
 
    ![bindrr_start](data/assets/binder_start.PNG)
  
