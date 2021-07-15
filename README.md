@@ -1,6 +1,6 @@
 # Mutual Funds Capital Gains
 
-[![Generic badge](https://img.shields.io/badge/python-3.8-3.9-<COLOR>.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/python-3.9-<COLOR>.svg)](https://shields.io/)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ajayrawatsap/mf_data/HEAD)
 
 
