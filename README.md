@@ -24,7 +24,7 @@ It produces two output files, [Aggregate](data/output/sample_output/sample_outpu
 A big thanks to team responsible for maintaining [casparser](https://github.com/codereverser/casparser) package which is used to parse CAMS CAS pdf satatement.
 
 ## Using Tool with Cloud Environment
-**This is easy to use process as no local installation is requireed and is based on cloud based virtual machines with required dependencies alresday installed**
+**This is easy to use process as no local installation is requireed and is based on cloud based virtual machines with required dependencies already installed**
 1. The frst step is to get the [consolidated account statement](https://www.camsonline.com/Investors/Statements/Consolidated-Account-Statement) from CAMS in PDF Format. Make sure that you select the option as highlighted in yellow. ![screenshot](https://github.com/ajayrawatsap/mf_data/blob/master/data/assets/cams.PNG)
 2. Launch  [Binder](https://mybinder.org/v2/gh/ajayrawatsap/mf_data/HEAD). This will create a cloud VM and install all python dependencies and create a Jupyter Notebook to run the scripts. This may take upto 1 one minute.
 
@@ -35,12 +35,16 @@ A big thanks to team responsible for maintaining [casparser](https://github.com/
    
 4. Upload your CAS statement downloaded in step 1 and save it as  cas.pdf in root directory as shown
     ![cas_upl](data/assets/upload_cas.PNG)
+    
 5. Launch python notebook demo.ipynb from the web repo, it will open in a new browser window tab. Select on Cell and then Run ALL
-     ![demo](data/assets/binder_demo.PNG)  ![run](data/assets/demo_run.PNG)
+   ![demo](data/assets/binder_demo.PNG)  ![run](data/assets/demo_run.PNG)
     
 6. Input the password in the input box and press ENTER
+   ![pass](data/assets/pass_input.PNG)
      
-7. The script will run and show the results with Header and Tranasaction data and will also show you number of units required for tax free LTCC. Plese note the VM session remains active only for a small amount time afterr which it gets deleted. Launch [Binder](https://mybinder.org/v2/gh/ajayrawatsap/mf_data/HEAD) again to restart prrocess
+7. The script will run and show the results with Header and Tranasaction data and will also show you number of units required for tax free LTCC.
+   Plese note the VM session remains active only for a small amount time afterr which it gets deleted. Launch [Binder](https://mybinder.org/v2/gh/ajayrawatsap/mf_data/HEAD) again to restart prrocess
+ ![output](data/assets/demo_output.png)
 
 
 ## Using Tool in Local Environment
