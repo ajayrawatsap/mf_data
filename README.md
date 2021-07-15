@@ -42,7 +42,7 @@ A big thanks to team responsible for maintaining [casparser](https://github.com/
 6. Input the password in the input box and press ENTER
    ![pass](data/assets/pass_input.PNG)
      
-7. The script will run and show the results with Header and Tranasaction data and will also show you number of units required for tax free LTCC.
+7. The script will run and show the results with Header and Tranasaction data and will also show you number of units required for tax free LTCG.
    Plese note the VM session remains active only for a small amount time afterr which it gets deleted. Launch [Binder](https://mybinder.org/v2/gh/ajayrawatsap/mf_data/HEAD) again to restart prrocess
  ![output](data/assets/demo_output.png)
 
