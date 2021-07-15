@@ -27,6 +27,7 @@ A big thanks to team responsible for maintaining [casparser](https://github.com/
 **This is easy to use process as no local installation is requireed and is based on cloud based virtual machines with required dependencies alresday installed**
 1. The frst step is to get the [consolidated account statement](https://www.camsonline.com/Investors/Statements/Consolidated-Account-Statement) from CAMS in PDF Format. Make sure that you select the option as highlighted in yellow. ![screenshot](https://github.com/ajayrawatsap/mf_data/blob/master/data/assets/cams.PNG)
 2. Launch  [Binder](https://mybinder.org/v2/gh/ajayrawatsap/mf_data/HEAD). This will create a cloud VM and install all python dependencies and create a Jupyter Notebook to run the scripts. This may take upto 1 one minute.
+
  ![](data/assets/binder_start.PNG)
 4. After sucessfull creation of VM you will see web based file structure as shown
 5. Upload your CAS statement downloaded in step 1 and save it as  cas.pdf in root directory as shown
