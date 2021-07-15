@@ -36,7 +36,7 @@ A big thanks to team responsible for maintaining [casparser](https://github.com/
 4. Upload your CAS statement downloaded in step 1 and save it as  cas.pdf in root directory as shown
     ![cas_upl](data/assets/upload_cas.PNG)
 5. Launch python notebook demo.ipynb from the web repo, it will open in a new browser window tab. Select on Cell and then Run ALL
-   ![run](data/assets/demo_run.PNG)
+     ![demo](data/assets/binder_demo.PNG) ( ![run](data/assets/demo_run.PNG)
     
 6. Input the password in the input box and press ENTER
      
