@@ -97,8 +97,9 @@ For some MF schemes the calculation may not be possible as the Grandfathred NAV 
  #### Why Calculations are also done for Debt Funds  
   The calculation would also be done for Debt funds but you should ignore it as LTCG for debt funds are calcuated differently. Currently it is not possible to differentiate between Equity and Debt Schemes. In Future only equity funds will be considered
 #### On Which OS can the tool run
-The tool has been tested in Windows 10 OS with python 3.9, but it should also work in linux/mac environment
-directly. Any suggestions and help is welcome
+The tool has been tested in Windows 10 OS with python 3.9, but it should also work in linux/mac environment.  
+
+The cloud based application is OS independent and can be run from web browser on desktop or mobile phones.
 #### It does not work correctly for my schemes
  The limited testing has happened on my own Mutual fund Schemes. In case you encounter bug and issue please report it in issues. 
 
