@@ -37,7 +37,7 @@ A big thanks to team responsible for maintaining [casparser](https://github.com/
 5. Launch python notebook demo.ipynb from the web repo, it will open in a new browser window tab. Select on Cell and then Run ALL
    ![demo](data/assets/binder_demo.PNG)  ![run](data/assets/demo_run.PNG)
     
-6. Input the password in the input box and press ENTER
+6. Input the password for cas.pdf in the input box and press ENTER
    ![pass](data/assets/pass_input.PNG)
      
 7. The script will run and show the results with Header and Transaction data and will also show you number of units required for tax free LTCG.
