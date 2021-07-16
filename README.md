@@ -118,7 +118,7 @@ The cloud based application is OS independent and can be run from web browser on
  Binder runs as a public, free service, don’t require any kind of log-in that would  keep track of user data. All code that is run, data analyzed, papers reproduced,   classes taught - in short, everything that happens in a Binder session - is destroyed when the user logs off or becomes inactive for more than a few minutes.
 <br> Read the [binder privacy](https://mybinder.readthedocs.io/en/latest/about/about.html#how-does-mybinder-org-ensure-user-privacy) and [seurity](https://mybinder.readthedocs.io/en/latest/about/about.html#how-secure-is-mybinder-org) information.
 
-## Feature List for duture releases
+## Feature List for future releases
 1. Analysis of MF portfolio with Graphs and Charts
-2. MF Portfolio evalaution and recommendation what to sell and buy
-3. Personal Finance planner 
+2. MF Portfolio evaluation and recommendation on rebalancing portfolio based on performance of schemes.
+3. Personal Finance planner based on user age, profession, risk appetite, existing net worth goals etc.
