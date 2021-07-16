@@ -48,6 +48,7 @@ This creates new instance of VM unique to your session and only you can see and 
    Plese note the VM session remains active only for a small amount time and after inactivity, it gets deleted. Launch [Binder](https://mybinder.org/v2/gh/ajayrawatsap/mf_data/HEAD) again to restart process
  ![output](data/assets/demo_output.png)
 8. The CSV output gets saved in data/output directory of VM as shown and can be downloaded  by selecting checkbox.
+   ![csv_out](data/assets/demo_csv.png)
 
 
 ## Using Tool in Local Environment
