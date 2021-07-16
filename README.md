@@ -8,6 +8,8 @@
 
 The aim of this project is to calculate number of units required to sell an Equity Mutual Fund so that LTCG (Long-term capital gains) is tax Free. 
 
+
+
 For Equity Mutual funds the gains up to 100,000 INR is tax free in a Financial Year. To calculate number of units required to sell a MF scheme so that LTCG is tax free is a complicated process which involves multiple factors such as
 1. LTCG is applicable for any Equity MF units sold after one year of its purchase data
 2. LTCG up to 100,000 INR is tax free while above this amount is taxable at 10% 
@@ -22,14 +24,16 @@ It produces two output files, [Aggregate](data/output/sample_output/sample_outpu
 
 A big thanks to team responsible for maintaining [casparser](https://github.com/codereverser/casparser) package which is used to parse CAMS CAS pdf satatement.
 
+You can read [aboutme](https://www.valueresearchonline.com/stories/49239/on-his-way-to-financial-independence) on VRO article where they published my story in their how-i-did-it segment.
+
 ## Using Tool with Cloud Environment
 **Easy to use as no local installation or set up is required. It is based on [binder](https://mybinder.readthedocs.io/en/latest/about/about.html) sharable cloud virtual machines environments and can be run on web browsers, with required dependencies already installed**
 
 
 1. The first step is to get the [consolidated account statement](https://www.camsonline.com/Investors/Statements/Consolidated-Account-Statement) from CAMS in PDF Format. Make sure that you select the option as highlighted in yellow. ![screenshot](https://github.com/ajayrawatsap/mf_data/blob/master/data/assets/cams.PNG)
 2. [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ajayrawatsap/mf_data/HEAD)
-   <br>This will create a cloud VM and install all python dependencies and create a Jupyter Notebook to run the scripts. 
-   <br>This may take 10 seconds to one minute depending on source VM image exist or not on server.
+   <br>On clicking above link it will create a cloud VM and install all python dependencies and create a Jupyter Notebook to run the scripts. 
+   <br>This may take 10 seconds to one minute depending on whether pre-built docker image exist or not on server.
 
    ![bindrr_start](data/assets/binder_start.PNG)
  
@@ -48,7 +52,7 @@ This creates new instance of VM unique to your session and only you can see and 
    ![pass](data/assets/pass_input.PNG)
      
 7. The script will run and show the results with Header and Transaction data and will also show you number of units required for tax free LTCG.
-   Plese note the VM session remains active only for a small amount time and after inactivity, it gets deleted. Launch [Binder](https://mybinder.org/v2/gh/ajayrawatsap/mf_data/HEAD) again to restart process
+   Plese note the VM session remains active only for a small amount time and after inactivity(10 Mins), it gets deleted. Launch [Binder](https://mybinder.org/v2/gh/ajayrawatsap/mf_data/HEAD) again to restart process
  ![output](data/assets/demo_output.png)
 8. The CSV output gets saved in data/output directory of VM as shown and can be downloaded  by selecting checkbox.
 
@@ -93,7 +97,7 @@ This creates new instance of VM unique to your session and only you can see and 
 
 ## FAQ
 #### Does it work for Partial Redemptions
-  It is assuumed that there are no partial redemptions as the calculations can be wrong. This will be supported in Future
+  It is assuumed that there are no partial redemptions as the calculations can be wrong. This will be supported in future
  #### How is Latest NAV and GrandFathered NAV fecthed 
  Latest NAV is fetched from the CAMS statement itself, therefore if you need to have latest calculation use the latest CAMS statement  .
  <br> GrandFathered NAV is fecthed from [AMFI website](https://www.amfiindia.com/nav-history-download)  for date 31-JAN-2018 and list has been parsed and downloaded in [csv file](data/nav/gf_nav_all.csv)
@@ -113,3 +117,8 @@ The cloud based application is OS independent and can be run from web browser on
 #### What are data privacy and security implcations of cloud based binder environment
  Binder runs as a public, free service, don’t require any kind of log-in that would  keep track of user data. All code that is run, data analyzed, papers reproduced,   classes taught - in short, everything that happens in a Binder session - is destroyed when the user logs off or becomes inactive for more than a few minutes.
 <br> Read the [binder privacy](https://mybinder.readthedocs.io/en/latest/about/about.html#how-does-mybinder-org-ensure-user-privacy) and [seurity](https://mybinder.readthedocs.io/en/latest/about/about.html#how-secure-is-mybinder-org) information.
+
+## Feature List for duture releases
+1. Analysis of MF portfolio with Graphs and Charts
+2. MF Portfolio evalaution and recommendation what to sell and buy
+3. Personal Finance planner 
