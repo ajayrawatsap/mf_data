@@ -6,7 +6,8 @@
 
 
 
-The aim of this project is to calculate number of units required to sell an Equity Mutual Fund so that LTCG (Long-term capital gains) is tax Free. 
+The aim of this project is to calculate number of units required to sell an Equity Mutual Fund so that LTCG (Long-term capital gains) is tax Free.
+Additionally you will also get all your MF transactional data extracted from Common Account Statement (CAS pdf) in csv format for further analysis.
 
 
 
