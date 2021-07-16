@@ -6,8 +6,6 @@
 
 
 The aim of this project is to calculate number of units required to sell an Equity Mutual Fund so that LTCG (Long-term capital gains) is tax Free. 
-<br>This would be initially a command line tool based on python script. 
-<br>In future it is planned to create standalone windows executable and then a proper website based on feedback and demand.
 
 For Equity Mutual funds the gains up to 100,000 INR is tax free in a Financial Year. To calculate number of units required to sell a MF scheme so that LTCG is tax free is a complicated process which involves multiple factors such as
 1. LTCG is applicable for any Equity MF units sold after one year of its purchase data
@@ -24,28 +22,37 @@ It produces two output files, [Aggregate](data/output/sample_output/sample_outpu
 A big thanks to team responsible for maintaining [casparser](https://github.com/codereverser/casparser) package which is used to parse CAMS CAS pdf satatement.
 
 ## Using Tool with Cloud Environment
-**This is easy to use process as no local installation is requireed and is based on cloud based virtual machines with required dependencies alresday installed**
-1. The frst step is to get the [consolidated account statement](https://www.camsonline.com/Investors/Statements/Consolidated-Account-Statement) from CAMS in PDF Format. Make sure that you select the option as highlighted in yellow. ![screenshot](https://github.com/ajayrawatsap/mf_data/blob/master/data/assets/cams.PNG)
-2. Launch  [Binder](https://mybinder.org/v2/gh/ajayrawatsap/mf_data/HEAD). This will create a cloud VM and install all python dependencies and create a Jupyter Notebook to run the scripts. This may take upto 1 one minute.
+**Easy to use as no local installation or set up is required. It is based on cloud virtual machines and can be run on web browsers, with required dependencies already installed**
+1. The first step is to get the [consolidated account statement](https://www.camsonline.com/Investors/Statements/Consolidated-Account-Statement) from CAMS in PDF Format. Make sure that you select the option as highlighted in yellow. ![screenshot](https://github.com/ajayrawatsap/mf_data/blob/master/data/assets/cams.PNG)
+2. [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ajayrawatsap/mf_data/HEAD)
+   <br>This will create a cloud VM and install all python dependencies and create a Jupyter Notebook to run the scripts. 
+   <br>This may take 10 seconds to one minute depending on source VM image exist or not on server.
 
    ![bindrr_start](data/assets/binder_start.PNG)
  
-3. After sucessfull creation of VM you will see web based file structure as shown
+3. After sucessfull creation of VM you will see web based file structure as shown. 
+This creates new instance of VM unique to your session and only you can see and edit files. 
+
    ![web_view](data/assets/binder_folder.PNG)
    
 4. Upload your CAS statement downloaded in step 1 and save it as  cas.pdf in root directory as shown
     ![cas_upl](data/assets/upload_cas.PNG)
-5. Launch python notebook demo.ipynb from the web repo, it will open in a new browser window tab. Select on Cell and then Run ALL
-     ![demo](data/assets/binder_demo.PNG)  ![run](data/assets/demo_run.PNG)
     
-6. Input the password in the input box and press ENTER
+5. Launch python notebook demo.ipynb from the web repo, it will open in a new browser window tab. Select on Cell and then Run ALL
+   ![demo](data/assets/binder_demo.PNG)  ![run](data/assets/demo_run.PNG)
+    
+6. Input the password for cas.pdf in the input box and press ENTER
+   ![pass](data/assets/pass_input.PNG)
      
-7. The script will run and show the results with Header and Tranasaction data and will also show you number of units required for tax free LTCC. Plese note the VM session remains active only for a small amount time afterr which it gets deleted. Launch [Binder](https://mybinder.org/v2/gh/ajayrawatsap/mf_data/HEAD) again to restart prrocess
+7. The script will run and show the results with Header and Transaction data and will also show you number of units required for tax free LTCG.
+   Plese note the VM session remains active only for a small amount time and after inactivity, it gets deleted. Launch [Binder](https://mybinder.org/v2/gh/ajayrawatsap/mf_data/HEAD) again to restart process
+ ![output](data/assets/demo_output.png)
+8. The CSV output gets saved in data/output directory of VM as shown and can be downloaded  by selecting checkbox.
 
 
 ## Using Tool in Local Environment
 **This is recommended for advanced users who can install python libraries and use command line tools**
-1. The frst step is to get the [consolidated account statement](https://www.camsonline.com/Investors/Statements/Consolidated-Account-Statement) from CAMS in PDF Format. Make sure that you select the option as highlighted in yellow. ![screenshot](https://github.com/ajayrawatsap/mf_data/blob/master/data/assets/cams.PNG)
+1. The first step is to get the [consolidated account statement](https://www.camsonline.com/Investors/Statements/Consolidated-Account-Statement) from CAMS in PDF Format. Make sure that you select the option as highlighted in yellow. ![screenshot](https://github.com/ajayrawatsap/mf_data/blob/master/data/assets/cams.PNG)
 2. Clone the current github repo. See [help](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) for more details. On windows it can be done by opening command prompt tool and runing below commands
    ```
    git clone https://github.com/ajayrawatsap/mf_data.git  
@@ -92,8 +99,9 @@ For some MF schemes the calculation may not be possible as the Grandfathred NAV 
  #### Why Calculations are also done for Debt Funds  
   The calculation would also be done for Debt funds but you should ignore it as LTCG for debt funds are calcuated differently. Currently it is not possible to differentiate between Equity and Debt Schemes. In Future only equity funds will be considered
 #### On Which OS can the tool run
-The tool has been tested in Windows 10 OS with python 3.9, but it should also work in linux/mac environment
-directly. Any suggestions and help is welcome
+The tool has been tested in Windows 10 OS with python 3.9, but it should also work in linux/mac environment.  
+
+The cloud based application is OS independent and can be run from web browser on desktop or mobile phones.
 #### It does not work correctly for my schemes
  The limited testing has happened on my own Mutual fund Schemes. In case you encounter bug and issue please report it in issues. 
 
