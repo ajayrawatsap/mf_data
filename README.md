@@ -1,6 +1,7 @@
 # Mutual Funds Capital Gains
 
-[![Generic badge](https://img.shields.io/badge/python-3.9-<COLOR>.svg)](https://shields.io/)
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/ajayrawatsap/mf_data/blob/master/LICENSE)
+[![Python 3.9](https://img.shields.io/badge/python-3.9-blue.svg)](https://www.python.org/downloads/release/python-390/)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ajayrawatsap/mf_data/HEAD)
 
 
@@ -48,6 +49,8 @@ This creates new instance of VM unique to your session and only you can see and 
    Plese note the VM session remains active only for a small amount time and after inactivity, it gets deleted. Launch [Binder](https://mybinder.org/v2/gh/ajayrawatsap/mf_data/HEAD) again to restart process
  ![output](data/assets/demo_output.png)
 8. The CSV output gets saved in data/output directory of VM as shown and can be downloaded  by selecting checkbox.
+
+   ![csv_out](data/assets/demo_csv.png)
 
 
 ## Using Tool in Local Environment
