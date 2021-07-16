@@ -11,9 +11,9 @@ Additionally you will also get all your MF transactional data extracted from Com
 
 
 
-For Equity Mutual funds the gains up to 100,000 INR is tax free in a Financial Year. To calculate number of units required to sell a MF scheme so that LTCG is tax free is a complicated process which involves multiple factors such as
+For Equity Mutual funds the gains up to 100,000 INR is tax free in a financial year. To calculate number of units required to sell a MF scheme so that LTCG is tax free is a complicated process which involves multiple factors such as
 1. LTCG is applicable for any Equity MF units sold after one year of its purchase data
-2. LTCG up to 100,000 INR is tax free while above this amount is taxable at 10% 
+2. LTCG up to 100,000 INR is tax free for all equity MF combined,  while above this amount it is taxable at 10% 
 3. Grand-Fathered clause, which means if you have an investment before 31-Jan-2018, then cost of acquisition would be  purchase price or NAV on 31-Jan-2018 whichever is higher
 4. If you have a SIP spanning across multiple years then each cost price, sale price and LTCG has to be calculated individually for each SIP
 
