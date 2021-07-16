@@ -24,8 +24,9 @@ A big thanks to team responsible for maintaining [casparser](https://github.com/
 ## Using Tool with Cloud Environment
 **Easy to use as no local installation or set up is required. It is based on cloud virtual machines and can be run on web browsers, with required dependencies already installed**
 1. The first step is to get the [consolidated account statement](https://www.camsonline.com/Investors/Statements/Consolidated-Account-Statement) from CAMS in PDF Format. Make sure that you select the option as highlighted in yellow. ![screenshot](https://github.com/ajayrawatsap/mf_data/blob/master/data/assets/cams.PNG)
-2. Launch  [Binder](https://mybinder.org/v2/gh/ajayrawatsap/mf_data/HEAD). This will create a cloud VM and install all python dependencies and create a Jupyter Notebook to run the scripts. 
-This may take 10 seconds to one minute depending on source VM image exist or not on server.
+2. [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ajayrawatsap/mf_data/HEAD)
+   <br>This will create a cloud VM and install all python dependencies and create a Jupyter Notebook to run the scripts. 
+   <br>This may take 10 seconds to one minute depending on source VM image exist or not on server.
 
    ![bindrr_start](data/assets/binder_start.PNG)
  
@@ -44,8 +45,9 @@ This creates new instance of VM unique to your session and only you can see and 
    ![pass](data/assets/pass_input.PNG)
      
 7. The script will run and show the results with Header and Transaction data and will also show you number of units required for tax free LTCG.
-   Plese note the VM session remains active only for a small amount time and after inactivity, it gets deleted. Launch [Binder](https://mybinder.org/v2/gh/ajayrawatsap/mf_data/HEAD) again to restart prrocess
+   Plese note the VM session remains active only for a small amount time and after inactivity, it gets deleted. Launch [Binder](https://mybinder.org/v2/gh/ajayrawatsap/mf_data/HEAD) again to restart process
  ![output](data/assets/demo_output.png)
+8. The CSV output gets saved in data/output directory of VM as shown and can be downloaded  by selecting checkbox.
 
 
 ## Using Tool in Local Environment
