@@ -23,7 +23,7 @@ It produces two output files, [Aggregate](data/output/sample_output/sample_outpu
 A big thanks to team responsible for maintaining [casparser](https://github.com/codereverser/casparser) package which is used to parse CAMS CAS pdf satatement.
 
 ## Using Tool with Cloud Environment
-**Easy to use as no local installation or set up is required. It is based on !binder(https://mybinder.readthedocs.io/en/latest/about/about.html) cloud virtual machines and can be run on web browsers, with required dependencies already installed**
+**Easy to use as no local installation or set up is required. It is based on [binder](https://mybinder.readthedocs.io/en/latest/about/about.html) sharable cloud virtual machines environments and can be run on web browsers, with required dependencies already installed**
 1. The first step is to get the [consolidated account statement](https://www.camsonline.com/Investors/Statements/Consolidated-Account-Statement) from CAMS in PDF Format. Make sure that you select the option as highlighted in yellow. ![screenshot](https://github.com/ajayrawatsap/mf_data/blob/master/data/assets/cams.PNG)
 2. [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ajayrawatsap/mf_data/HEAD)
    <br>This will create a cloud VM and install all python dependencies and create a Jupyter Notebook to run the scripts. 
