@@ -24,6 +24,8 @@ A big thanks to team responsible for maintaining [casparser](https://github.com/
 
 ## Using Tool with Cloud Environment
 **Easy to use as no local installation or set up is required. It is based on [binder](https://mybinder.readthedocs.io/en/latest/about/about.html) sharable cloud virtual machines environments and can be run on web browsers, with required dependencies already installed**
+
+
 1. The first step is to get the [consolidated account statement](https://www.camsonline.com/Investors/Statements/Consolidated-Account-Statement) from CAMS in PDF Format. Make sure that you select the option as highlighted in yellow. ![screenshot](https://github.com/ajayrawatsap/mf_data/blob/master/data/assets/cams.PNG)
 2. [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ajayrawatsap/mf_data/HEAD)
    <br>This will create a cloud VM and install all python dependencies and create a Jupyter Notebook to run the scripts. 
@@ -107,4 +109,7 @@ The tool has been tested in Windows 10 OS with python 3.9, but it should also wo
 The cloud based application is OS independent and can be run from web browser on desktop or mobile phones.
 #### It does not work correctly for my schemes
  The limited testing has happened on my own Mutual fund Schemes. In case you encounter bug and issue please report it in issues. 
-
+ 
+#### What are data privacy and security implcations of cloud based binder environment
+ Binder runs as a public, free service, don’t require any kind of log-in that would  keep track of user data. All code that is run, data analyzed, papers reproduced,   classes taught - in short, everything that happens in a Binder session - is destroyed when the user logs off or becomes inactive for more than a few minutes.
+<br> Read the [binder privacy](https://mybinder.readthedocs.io/en/latest/about/about.html#how-does-mybinder-org-ensure-user-privacy) and [seurity](https://mybinder.readthedocs.io/en/latest/about/about.html#how-secure-is-mybinder-org) information.
