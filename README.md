@@ -24,7 +24,7 @@ It produces two output files, [Aggregate](data/output/sample_output/sample_outpu
 
 A big thanks to team responsible for maintaining [casparser](https://github.com/codereverser/casparser) package which is used to parse CAMS CAS pdf satatement.
 
-You can read [aboutme](https://www.valueresearchonline.com/stories/49239/on-his-way-to-financial-independence) adn thought process behind this project on VRO article where they published my story in their how-i-did-it segment.
+You can read [about me](https://www.valueresearchonline.com/stories/49239/on-his-way-to-financial-independence) and thought process behind this project on VRO article where they published my story in their how-i-did-it segment.
 
 ## Using Tool with Cloud Environment
 **Easy to use as no local installation or set up is required. It is based on [binder](https://mybinder.readthedocs.io/en/latest/about/about.html) sharable cloud virtual machines environments and can be run on web browsers, with required dependencies already installed**
