@@ -95,6 +95,7 @@ This creates new instance of VM unique to your session and only you can see and 
 6. It will create two output files in directory  data/output/
     1. output_mf_totals.csv: For each mutual fund scheme it will list the total LTCG, STCG, Percent  Gain and Target units to sell for tax free gains. Check sample [output](data/output/sample_output/sample_output_mf_totals.csv) file
     1. output_mf_transactions.csv: This will list transaction level details and claculations for LTCG, STCG and gain percent. Check  sample [output](data/output/sample_output/sample_output_mf_transactions.csv) file.
+7. Additionaly you can check the [Jupyter Notebook](demo.ipynb) to see how major API's are called and do further experiments.
 
 
 ## FAQ
