@@ -22,10 +22,9 @@ class PDFParser:
     
     def parse_mf_data(self,file_path:str, password:str = '')->tuple[pd.DataFrame,pd.DataFrame]: 
         # data in nested dictionary form  
-        mf_data = casparser.read_cas_pdf(file_path, password )   
-
+        mf_data = casparser.read_cas_pdf(file_path, password)   
         mf_trans_dict = defaultdict(list)
-        mf_hdr_df    = defaultdict(list)
+        mf_hdr_dict   = defaultdict(list)
         # Each folio is a list item for each folio
         for folio in  mf_data['folios']:
             
@@ -33,36 +32,51 @@ class PDFParser:
             for scheme in folio['schemes']:
 
                 #Exclude Portfolio without any meaninful data:e.g. segregated portfolio
-                if scheme['isin'] is None:
+                if scheme['amfi'] is None:  #Scheme Code 
+                    logging.warning(f"Scheme {scheme['scheme']}, is exluded as Scheme Code not found\n")
                     continue
-                
+
+            
                 # AMC Level Data
-                mf_hdr_df['amc'].append(folio['amc'])
-                mf_hdr_df['folio_no'].append(folio['folio'])
+                mf_hdr_dict['amc'].append(folio['amc'])
+                mf_hdr_dict['folio_no'].append(folio['folio'])
                 
                 #Scheme Level Data
-                mf_hdr_df['scheme_name'].append(scheme['scheme'])
-                mf_hdr_df['isin'].append(scheme['isin'])
-                mf_hdr_df['scheme_code'].append(scheme['amfi'])
-                mf_hdr_df['latest_nav'].append(scheme['valuation']['nav'])
-                mf_hdr_df['latest_nav_date'].append(scheme['valuation']['date'])
+                mf_hdr_dict['scheme_name'].append(scheme['scheme'])
+                mf_hdr_dict['type'].append(scheme['type'])
+                mf_hdr_dict['isin'].append(scheme['isin'])
+                mf_hdr_dict['scheme_code'].append(scheme['amfi'])
+                mf_hdr_dict['latest_nav'].append(scheme['valuation']['nav'])        
+                mf_hdr_dict['latest_nav_date'].append(scheme['valuation']['date'])
                 
                 # Scheme Transaction level information
                 for trans in scheme['transactions']:         
                     
                 
-                    mf_trans_dict['scheme_name'].append(scheme['scheme'])              
+                    mf_trans_dict['scheme_name'].append(scheme['scheme'])   
                     mf_trans_dict['trans_date'].append(trans['date'])
                     mf_trans_dict['amount'].append(trans['amount'])
                     mf_trans_dict['units'].append(trans['units'])
                     mf_trans_dict['purch_nav'].append(trans['nav'])
-                    mf_trans_dict['nav_balance'].append(trans['balance'])
+                    mf_trans_dict['units_balance'].append(trans['balance'])
                     mf_trans_dict['trans_type'].append(trans['type'])
 
-        mf_hdr_df = pd.DataFrame.from_dict(mf_hdr_df)
-        mf_trans_df = pd.DataFrame.from_dict(mf_trans_dict)
-        mf_trans_df = mf_trans_df[mf_trans_df.trans_type != 'STAMP_DUTY_TAX']
-        logging.debug(f'Number of Mutual Funds Scheme: {mf_hdr_df.shape[0]}\n')
+                mf_hdr_df = pd.DataFrame.from_dict(mf_hdr_dict)
+                mf_trans_df = pd.DataFrame.from_dict(mf_trans_dict)
+
+                # Exlude Transactions on basis of transaction type
+                mf_trans_df = mf_trans_df[(   
+                                 ( mf_trans_df.trans_type != 'STAMP_DUTY_TAX') & 
+                                 ( mf_trans_df.trans_type != 'STT_TAX')
+                                         )]
+               
+            #   Remove Rdemeptions and segregated transactions for now
+                # mf_trans_df = mf_trans_df [mf_trans_df.units > 0]
+                mf_hdr_df = mf_hdr_df [mf_hdr_df.latest_nav > 0]
+
+           
+        logging.debug(f'Number of Mutual Funds Scheme: {mf_hdr_df.shape[0]}')
+        logging.debug(f'Number of Mutual Funds Transactions: {mf_trans_df.shape[0]}\n')  
 
         return  mf_trans_df, mf_hdr_df
 
