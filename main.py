@@ -3,7 +3,7 @@ import os
 import argparse
 
 import src.constants as ct
-import src.tests.testconfig as tc
+
 
 from src.parsedata import DataParser, PDFParser
 from src.initialize import Logger
@@ -13,7 +13,7 @@ from src.capitalgains import CapitalGains
 def main(  display_logs ='yes', debug_mode = False):
     if debug_mode:
        file_path = 'cas.pdf'
-       password = tc.password
+    #    password = tc.password
        target_ltcg = 100000
     else:
         parser = argparse.ArgumentParser()
