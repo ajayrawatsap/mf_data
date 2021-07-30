@@ -10,7 +10,6 @@ from src.initialize import Logger
 from src.capitalgains import CapitalGains
 
 
-# def main(file_name:str, display_logs ='yes', target_ltcg:float = 100000.00 ):
 def main(  display_logs ='yes', debug_mode = False):
     if debug_mode:
        file_path = 'cas.pdf'

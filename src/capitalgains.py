@@ -384,33 +384,7 @@ class CapitalGains:
         # Create HDR MF data will aggregate data and units to sell for target LTCG
         self.mf_hdr_df = self.prepare_hdr_data(self.mf_hdr_df, self.mf_trans_df, target_ltcg)
 
-        # hdr_dict = defaultdict(list)
-
-        # mf_schemes_list = self.mf_hdr_df.scheme_name.to_list()
-        # for scheme_name in mf_schemes_list:
-        #     target_ltcg_sell, target_units, msg  = self.calc_units_to_sell(scheme_name, target_ltcg)
-        #     hdr_dict['scheme_name'].append(scheme_name)
-        #     hdr_dict['target_ltcg'].append(target_ltcg_sell)
-        #     hdr_dict['target_units'].append(target_units)
-        #     hdr_dict['comments'].append(msg)
-
-        # #MF Header data with Target LTCG and Units to sell
-        # mf_hdr_ltcg_df = pd.DataFrame.from_dict(hdr_dict )
-
-
-        # # calculater aggregates from MF Transaction Data
-        # agg = {'amount': pd.NamedAgg(column= 'amount', aggfunc = 'sum'),
-        #     'units': pd.NamedAgg(column= 'units',  aggfunc = 'sum'),
-        #     'ltcg': pd.NamedAgg(column= 'ltcg', aggfunc = 'sum') ,
-        #     'stcg': pd.NamedAgg(column= 'stcg', aggfunc = 'sum'),
-        #     'current_amt': pd.NamedAgg(column= 'current_amt', aggfunc = 'sum') }
-        # mf_trans_grp_df = self.mf_trans_df.groupby('scheme_name').agg(**agg).reset_index()
-        # mf_trans_grp_df['perc_gain'] =   ((mf_trans_grp_df['current_amt'] - mf_trans_grp_df['amount'].astype(float)) / 
-        #                                      mf_trans_grp_df['amount'].astype(float) * 100 )
-
-        # # Merge all header data
-        # self.mf_hdr_df = pd.merge(self.mf_hdr_df, mf_trans_grp_df, on ='scheme_name', how = 'left' )
-        # self.mf_hdr_df = pd.merge(self.mf_hdr_df, mf_hdr_ltcg_df, on ='scheme_name', how = 'left' )
+        
         
         # Prepare Output data to download as CSV File
         self.output_hdr_df = self.mf_hdr_df.copy()
