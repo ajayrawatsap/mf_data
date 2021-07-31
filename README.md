@@ -3,21 +3,16 @@
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/ajayrawatsap/mf_data/blob/master/LICENSE)
 [![Python 3.9](https://img.shields.io/badge/python-3.9-blue.svg)](https://www.python.org/downloads/release/python-390/)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ajayrawatsap/mf_data/HEAD)
+<!-- [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ajayrawatsap/mf_data/HEAD?urlpath=lab/tree/demo.ipynb) -->
 
 
 
-The aim of this project is to calculate number of units required to sell an Equity Mutual Fund so that LTCG (Long-term capital gains) is tax Free. 
-
-Additionally it will also do portfolio analysis to show graphs for below data:
-1. Portfolio summary with aggregate data split for Equity and Debt Funds
-2. Display scheme wise Invested Amount, Current Amount, Gain/Loss
-3. Display taxable unrealised LTCG and STCG 
-4. Display Fund allocation by MF scheme and MF House
+The aim of this project is to calculate number of units required to sell an Equity Mutual Fund so that LTCG (Long-term capital gains) is tax Free.
+Additionally you will also get all your MF transactional data extracted from Common Account Statement (CAS pdf) in csv format for further analysis.
 
 
-For Equity Mutual funds the gains up to 100,000 INR is tax free in a Financial Year. To calculate number of units required to sell a MF scheme so that LTCG is tax free is a complicated process which involves multiple factors such as
 1. LTCG is applicable for any Equity MF units sold after one year of its purchase data
-2. LTCG up to 100,000 INR is tax free while above this amount is taxable at 10% 
+2. LTCG up to 100,000 INR is tax free for all equity MF combined,  while above this amount it is taxable at 10% 
 3. Grand-Fathered clause, which means if you have an investment before 31-Jan-2018, then cost of acquisition would be  purchase price or NAV on 31-Jan-2018 whichever is higher
 4. If you have a SIP spanning across multiple years then each cost price, sale price and LTCG has to be calculated individually for each SIP
 
@@ -29,12 +24,16 @@ It produces two output files, [Aggregate](data/output/sample_output/sample_outpu
 
 A big thanks to team responsible for maintaining [casparser](https://github.com/codereverser/casparser) package which is used to parse CAMS CAS pdf satatement.
 
+You can read [about me](https://www.valueresearchonline.com/stories/49239/on-his-way-to-financial-independence) and thought process behind this project on VRO article where they published my story in their how-i-did-it segment.
+
 ## Using Tool with Cloud Environment
-**Easy to use as no local installation or set up is required. It is based on cloud virtual machines and can be run on web browsers, with required dependencies already installed**
+**Easy to use as no local installation or set up is required. It is based on [binder](https://mybinder.readthedocs.io/en/latest/about/about.html) sharable cloud virtual machines environments and can be run on web browsers, with required dependencies already installed**
+
+
 1. The first step is to get the [consolidated account statement](https://www.camsonline.com/Investors/Statements/Consolidated-Account-Statement) from CAMS in PDF Format. Make sure that you select the option as highlighted in yellow. ![screenshot](https://github.com/ajayrawatsap/mf_data/blob/master/data/assets/cams.PNG)
 2. [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ajayrawatsap/mf_data/HEAD)
-   <br>This will create a cloud VM and install all python dependencies and create a Jupyter Notebook to run the scripts. 
-   <br>This may take 10 seconds to one minute depending on source VM image exist or not on server.
+   <br>On clicking above link it will create a cloud VM and install all python dependencies and create a Jupyter Notebook to run the scripts. 
+   <br>This may take 10 seconds to one minute depending on whether pre-built docker image exist or not on server.
 
    ![bindrr_start](data/assets/binder_start.PNG)
  
@@ -53,7 +52,7 @@ This creates new instance of VM unique to your session and only you can see and 
    ![pass](data/assets/pass_input.PNG)
      
 7. The script will run and show the results with Header and Transaction data and will also show you number of units required for tax free LTCG.
-   Plese note the VM session remains active only for a small amount time and after inactivity, it gets deleted. Launch [Binder](https://mybinder.org/v2/gh/ajayrawatsap/mf_data/HEAD) again to restart process
+   Plese note the VM session remains active only for a small amount time and after inactivity(10 Mins), it gets deleted. Launch [Binder](https://mybinder.org/v2/gh/ajayrawatsap/mf_data/HEAD) again to restart process
  ![output](data/assets/demo_output.png)
 8. The CSV output gets saved in data/output directory of VM as shown and can be downloaded  by selecting checkbox.
 
@@ -94,11 +93,12 @@ This creates new instance of VM unique to your session and only you can see and 
 6. It will create two output files in directory  data/output/
     1. output_mf_totals.csv: For each mutual fund scheme it will list the total LTCG, STCG, Percent  Gain and Target units to sell for tax free gains. Check sample [output](data/output/sample_output/sample_output_mf_totals.csv) file
     1. output_mf_transactions.csv: This will list transaction level details and claculations for LTCG, STCG and gain percent. Check  sample [output](data/output/sample_output/sample_output_mf_transactions.csv) file.
+7. Additionaly you can check the [Jupyter Notebook](demo.ipynb) to see how major API's are called and do further experiments.
 
 
 ## FAQ
 #### Does it work for Partial Redemptions
-  It is assuumed that there are no partial redemptions as the calculations can be wrong. This will be supported in Future
+  It is assuumed that there are no partial redemptions as the calculations can be wrong. This will be supported in future
  #### How is Latest NAV and GrandFathered NAV fecthed 
  Latest NAV is fetched from the CAMS statement itself, therefore if you need to have latest calculation use the latest CAMS statement  .
  <br> GrandFathered NAV is fecthed from [AMFI website](https://www.amfiindia.com/nav-history-download)  for date 31-JAN-2018 and list has been parsed and downloaded in [csv file](data/nav/gf_nav_all.csv)
@@ -114,4 +114,12 @@ The tool has been tested in Windows 10 OS with python 3.9, but it should also wo
 The cloud based application is OS independent and can be run from web browser on desktop or mobile phones.
 #### It does not work correctly for my schemes
  The limited testing has happened on my own Mutual fund Schemes. In case you encounter bug and issue please report it in issues. 
+ 
+#### What are data privacy and security implcations of cloud based binder environment
+ Binder runs as a public, free service, don’t require any kind of log-in that would  keep track of user data. All code that is run, data analyzed, papers reproduced,   classes taught - in short, everything that happens in a Binder session - is destroyed when the user logs off or becomes inactive for more than a few minutes.
+<br> Read the [binder privacy](https://mybinder.readthedocs.io/en/latest/about/about.html#how-does-mybinder-org-ensure-user-privacy) and [seurity](https://mybinder.readthedocs.io/en/latest/about/about.html#how-secure-is-mybinder-org) information.
 
+## Feature List for future releases
+1. Analysis of MF portfolio with Graphs and Charts
+2. MF Portfolio evaluation and recommendation on rebalancing portfolio based on performance of schemes.
+3. Personal Finance planner based on user age, profession, risk appetite, existing net worth, goals etc.
