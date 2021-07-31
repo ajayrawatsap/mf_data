@@ -284,6 +284,7 @@ def display_mf_scheme_pie_chart(mf_hdr_df:pd.DataFrame)->None:
                                 )])
 
     fig.update_layout(
+                    # height=600,
                     title = 'Mutual Funds Allocation'
                         )                              
     fig.show()
