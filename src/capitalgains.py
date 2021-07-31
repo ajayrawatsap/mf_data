@@ -54,97 +54,196 @@ class CapitalGains:
             for scheme in mf_gf_nav_null:
                 logging.warning(scheme)
 
-    def _get_stcg_ltcg(self,trans_date:datetime.date,latest_nav:float, latest_nav_date:datetime.date,
-                       new_purh_nav:float, units:float, mf_type:str )->tuple[float, float ]:
-        ltcg =  0
-        stcg =  0
-        date_one_year_ago  = latest_nav_date - relativedelta(years=1)
-        date_3_year_ago    = latest_nav_date - relativedelta(years=3)
-
-        if latest_nav is None or new_purh_nav is None or units is None:
-            logging.warning(f"For Transaction date {trans_date} data is missing: Skipping capital Gains Calculation")
-            return Decimal(0), Decimal(0)
-        else:
-            capital_gains = (latest_nav - new_purh_nav) * units
-
-        if mf_type == ct.MF_EQUITY:
-            #Transaction date is  earlier than a year ago, gains are STCG for Equity Funds
-            if trans_date >= date_one_year_ago:
-                stcg =  capital_gains     
-            #Transaction date is later than a than a year ago, gains are LTCG
-            elif trans_date < date_one_year_ago:
-                ltcg = capital_gains
-
-        elif mf_type == ct.MF_DEBT:
-            #Transaction date is  earlier than 3 years ago, gains are STCG for Debt Funds
-             if trans_date >= date_3_year_ago:
-                stcg =  capital_gains     
-             #Transaction date is later than 3 yaers gains are LTCG for debt funds
-             elif trans_date < date_3_year_ago:
-                ltcg = capital_gains
-        return ltcg, stcg
-
-    def _get_new_purch_nav(self,trans_date: datetime, price:float,  gf_nav:float,mf_type:str ) -> float:
-        '''
-        #Return the New Purchase NAV based on transaction date
-        For transaction earlier than 31-JAN-2018, the new purchase NAV is max of gf_nav or 
-        For transaction later than 31-JAN-2018, the new purchase NAV is same as purchase nav
-        For Debt Funds no GrandFathered clause is applicable hence return the orig purchase price
-        '''
-        if mf_type == ct.MF_EQUITY:
-            if trans_date <= pd.to_datetime(ct.GF_NAV_DATE, format= ct.DATE_FORMAT):
-                return max(gf_nav,price )
-            elif trans_date > pd.to_datetime(ct.GF_NAV_DATE, format= ct.DATE_FORMAT):
-                return price   
-        elif mf_type == ct.MF_DEBT:
-            return price   
-
-    def _calculate_capital_gains(self):
+    def _calculate_capital_gains( self, mf_trans_df:pd.DataFrame)->pd.DataFrame:
         '''        
         Set New purchase price based on transaction date 
         Calculate LTCG and STCG based on transaction date
 
         '''
 
+        def _get_new_purch_nav(trans_date: datetime, price:Decimal,  gf_nav:Decimal,mf_type:str ) -> Decimal:
+            '''
+            #Return the New Purchase NAV based on transaction date
+            For transaction earlier than 31-JAN-2018, the new purchase NAV is max of gf_nav or 
+            For transaction later than 31-JAN-2018, the new purchase NAV is same as purchase nav
+            For Debt Funds no GrandFathered clause is applicable hence return the orig purchase price
+            '''
+            if mf_type == ct.MF_EQUITY:
+                if trans_date <= pd.to_datetime(ct.GF_NAV_DATE, format= ct.DATE_FORMAT):
+                    return max(gf_nav,price )
+                elif trans_date > pd.to_datetime(ct.GF_NAV_DATE, format= ct.DATE_FORMAT):
+                    return price   
+            elif mf_type == ct.MF_DEBT:
+                return price   
+        
+        def _get_stcg_ltcg(trans_date:datetime.date,latest_nav:Decimal, latest_nav_date:datetime.date,
+                       new_purh_nav:Decimal, units:Decimal, mf_type:str )->tuple[Decimal, Decimal ]:
+            
+            ltcg =  Decimal(0)
+            stcg =  Decimal(0)
+            date_one_year_ago  = latest_nav_date - relativedelta(years=1)
+            date_3_year_ago    = latest_nav_date - relativedelta(years=3)
+
+            if latest_nav is None or new_purh_nav is None or units is None:
+                logging.warning(f"For Transaction date {trans_date} data is missing: Skipping capital Gains Calculation")
+                return Decimal(0), Decimal(0)
+            else:
+                capital_gains = (latest_nav - new_purh_nav) * units
+
+                
+
+            if mf_type == ct.MF_EQUITY:
+                #Transaction date is  earlier than a year ago, gains are STCG for Equity Funds
+                if trans_date >= date_one_year_ago:
+                    stcg =  capital_gains     
+                #Transaction date is later than a than a year ago, gains are LTCG
+                elif trans_date < date_one_year_ago:
+                    ltcg = capital_gains
+
+            elif mf_type == ct.MF_DEBT:
+                #Transaction date is  earlier than 3 years ago, gains are STCG for Debt Funds
+                if trans_date >= date_3_year_ago:
+                    stcg =  capital_gains     
+                #Transaction date is later than 3 yaers gains are LTCG for debt funds
+                elif trans_date < date_3_year_ago:
+                    ltcg = capital_gains
+            
+            return ltcg, stcg
+
       
         #Check if there is any row with missing value
-        null_idx = self.mf_trans_df.index[self.mf_trans_df.isna().any(axis =1)].tolist()
+        null_idx = mf_trans_df.index[mf_trans_df.isna().any(axis =1)].tolist()
         if len(null_idx) > 0:
             logging.warning(f"{len(null_idx)} rows are missing values for one or more columns.")
-            logging.warning( self.mf_trans_df.loc[null_idx].to_dict())
+            logging.warning( mf_trans_df.loc[null_idx].to_dict())
         else:
             logging.info(f"No Missing data Found:" )
 
 
         #if transaction date is before Jan-2018 use grand fathered NAV else use current NAV for calculating capital gains
-        self.mf_trans_df['new_purch_nav'] = self.mf_trans_df.apply(lambda x: 
-                                                                   self._get_new_purch_nav(x.trans_date, 
+        mf_trans_df['new_purch_nav'] = mf_trans_df.apply(lambda x: 
+                                                                   _get_new_purch_nav(x.trans_date, 
                                                                                            x.purch_nav, 
                                                                                            x.gf_nav,
                                                                                            x.type  ), 
                                                                     axis = 1)
 
         #Calculate the STCG or LTCG using New Purchase NAV per transaction
-        self.mf_trans_df[['ltcg', 'stcg']] = self.mf_trans_df.apply(lambda x:  
-                                                                    self._get_stcg_ltcg( x.trans_date,
+        mf_trans_df[['ltcg', 'stcg']] = mf_trans_df.apply(lambda x:  
+                                                                    _get_stcg_ltcg( x.trans_date,
                                                                                          x.latest_nav,
                                                                                          x.latest_nav_date,
-                                                                                         x.new_purch_nav,                                                      
-                                                                                         x.units,
+                                                                                         x.new_purch_nav, 
+                                                                                         x.units_remain,                                                    
+                                                                                        #  x.units,
                                                                                          x.type ) ,
                                                                     axis = 1, 
                                                                     result_type= 'expand')
 
         #Set Cumiltaive sum of LTCG and Units for each MF scheme
-        self.mf_trans_df['cumil_ltcg'] = self.mf_trans_df.groupby('scheme_name')['ltcg'].transform(pd.Series.cumsum)
-        self.mf_trans_df['cumil_units'] = self.mf_trans_df.groupby('scheme_name')['units'].transform(pd.Series.cumsum)                                                            
+        mf_trans_df['cumil_ltcg'] = mf_trans_df.groupby('scheme_name')['ltcg'].transform(pd.Series.cumsum)
+        mf_trans_df['cumil_units'] = mf_trans_df.groupby('scheme_name')['units_remain'].transform(pd.Series.cumsum)                                                            
 
         #Latest Amount and Percent Gain
-        # self.mf_trans_df['current_amt'] = self.mf_trans_df.units * self.mf_trans_df.latest_nav
-        # self.mf_trans_df['perc_gain'] =   ((self.mf_trans_df['current_amt'] - self.mf_trans_df['amount']) /  self.mf_trans_df['amount']) * 100
+        # mf_trans_df['current_amt'] = mf_trans_df.units * mf_trans_df.latest_nav
+        # mf_trans_df['perc_gain'] =   ((mf_trans_df['current_amt'] - mf_trans_df['amount']) /  mf_trans_df['amount']) * 100
+
+        logging.info('\n' )        
+        return mf_trans_df
+
+
+
+    # def _get_stcg_ltcg(self,trans_date:datetime.date,latest_nav:float, latest_nav_date:datetime.date,
+    #                    new_purh_nav:float, units:float, mf_type:str )->tuple[float, float ]:
+    #     ltcg =  0
+    #     stcg =  0
+    #     date_one_year_ago  = latest_nav_date - relativedelta(years=1)
+    #     date_3_year_ago    = latest_nav_date - relativedelta(years=3)
+
+    #     if latest_nav is None or new_purh_nav is None or units is None:
+    #         logging.warning(f"For Transaction date {trans_date} data is missing: Skipping capital Gains Calculation")
+    #         return Decimal(0), Decimal(0)
+    #     else:
+    #         capital_gains = (latest_nav - new_purh_nav) * units
+
+    #     if mf_type == ct.MF_EQUITY:
+    #         #Transaction date is  earlier than a year ago, gains are STCG for Equity Funds
+    #         if trans_date >= date_one_year_ago:
+    #             stcg =  capital_gains     
+    #         #Transaction date is later than a than a year ago, gains are LTCG
+    #         elif trans_date < date_one_year_ago:
+    #             ltcg = capital_gains
+
+    #     elif mf_type == ct.MF_DEBT:
+    #         #Transaction date is  earlier than 3 years ago, gains are STCG for Debt Funds
+    #          if trans_date >= date_3_year_ago:
+    #             stcg =  capital_gains     
+    #          #Transaction date is later than 3 yaers gains are LTCG for debt funds
+    #          elif trans_date < date_3_year_ago:
+    #             ltcg = capital_gains
+    #     return ltcg, stcg
+
+    # def _get_new_purch_nav(self,trans_date: datetime, price:float,  gf_nav:float,mf_type:str ) -> float:
+    #     '''
+    #     #Return the New Purchase NAV based on transaction date
+    #     For transaction earlier than 31-JAN-2018, the new purchase NAV is max of gf_nav or 
+    #     For transaction later than 31-JAN-2018, the new purchase NAV is same as purchase nav
+    #     For Debt Funds no GrandFathered clause is applicable hence return the orig purchase price
+    #     '''
+    #     if mf_type == ct.MF_EQUITY:
+    #         if trans_date <= pd.to_datetime(ct.GF_NAV_DATE, format= ct.DATE_FORMAT):
+    #             return max(gf_nav,price )
+    #         elif trans_date > pd.to_datetime(ct.GF_NAV_DATE, format= ct.DATE_FORMAT):
+    #             return price   
+    #     elif mf_type == ct.MF_DEBT:
+    #         return price   
+
+    # def _calculate_capital_gains(self):
+    #     '''        
+    #     Set New purchase price based on transaction date 
+    #     Calculate LTCG and STCG based on transaction date
+
+    #     '''
+
+      
+    #     #Check if there is any row with missing value
+    #     null_idx = self.mf_trans_df.index[self.mf_trans_df.isna().any(axis =1)].tolist()
+    #     if len(null_idx) > 0:
+    #         logging.warning(f"{len(null_idx)} rows are missing values for one or more columns.")
+    #         logging.warning( self.mf_trans_df.loc[null_idx].to_dict())
+    #     else:
+    #         logging.info(f"No Missing data Found:" )
+
+
+    #     #if transaction date is before Jan-2018 use grand fathered NAV else use current NAV for calculating capital gains
+    #     self.mf_trans_df['new_purch_nav'] = self.mf_trans_df.apply(lambda x: 
+    #                                                                self._get_new_purch_nav(x.trans_date, 
+    #                                                                                        x.purch_nav, 
+    #                                                                                        x.gf_nav,
+    #                                                                                        x.type  ), 
+    #                                                                 axis = 1)
+
+    #     #Calculate the STCG or LTCG using New Purchase NAV per transaction
+    #     self.mf_trans_df[['ltcg', 'stcg']] = self.mf_trans_df.apply(lambda x:  
+    #                                                                 self._get_stcg_ltcg( x.trans_date,
+    #                                                                                      x.latest_nav,
+    #                                                                                      x.latest_nav_date,
+    #                                                                                      x.new_purch_nav,                                                      
+    #                                                                                      x.units,
+    #                                                                                      x.type ) ,
+    #                                                                 axis = 1, 
+    #                                                                 result_type= 'expand')
+
+    #     #Set Cumiltaive sum of LTCG and Units for each MF scheme
+    #     self.mf_trans_df['cumil_ltcg'] = self.mf_trans_df.groupby('scheme_name')['ltcg'].transform(pd.Series.cumsum)
+    #     self.mf_trans_df['cumil_units'] = self.mf_trans_df.groupby('scheme_name')['units'].transform(pd.Series.cumsum)                                                            
+
+    #     #Latest Amount and Percent Gain
+    #     # self.mf_trans_df['current_amt'] = self.mf_trans_df.units * self.mf_trans_df.latest_nav
+    #     # self.mf_trans_df['perc_gain'] =   ((self.mf_trans_df['current_amt'] - self.mf_trans_df['amount']) /  self.mf_trans_df['amount']) * 100
 
         
-        logging.info('\n' )
+    #     logging.info('\n' )
 
     def if_gf_nav_ok(self, mf_trans_single_df:pd.DataFrame)->bool:
         '''
@@ -375,10 +474,13 @@ class CapitalGains:
         '''
 
         self._set_gf_nav()
-        self._calculate_capital_gains()
-        
+
+       
         #Set Redeemded units and Invested, Current Amounts
         self.mf_trans_df = self.set_units_amts_for_redemptions(self.mf_trans_df)
+
+         #Set new purch nav and calculate LTCG and STCG and their cumilative value
+        self.mf_trans_df = self._calculate_capital_gains( self.mf_trans_df)        
 
 
         # Create HDR MF data will aggregate data and units to sell for target LTCG

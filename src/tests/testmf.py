@@ -52,8 +52,8 @@ class UnitTest():
         print("running Basic Test:", end = " ")
         
 
-        file_path_cas = os.path.join( tc.unit_test_base_dir, 'basic', 'cas_june_27.pdf')
-        file_path_actual = os.path.join( tc.unit_test_base_dir, 'basic', 'hdr_cas_june_27.csv')
+        file_path_cas = os.path.join( tc.unit_test_base_dir, 'cas_jul_29_21.pdf')
+        file_path_actual = os.path.join( tc.unit_test_base_dir,  'output_mf_totals_jul_29_21.csv')
 
         logging.info(f"running Basic Test for input file {file_path_cas}")
         
@@ -171,13 +171,17 @@ class UnitTest():
 
         cg = CapitalGains(mf_hdr_df, mf_trans_df)
         cg._set_gf_nav()
-        cg._calculate_capital_gains()
 
-        mf_trans_df = cg.set_units_amts_for_redemptions(cg.mf_trans_df)
+
+        
+        cg.mf_trans_df = cg.set_units_amts_for_redemptions(cg.mf_trans_df)
+
+        cg.mf_trans_df= cg._calculate_capital_gains(cg.mf_trans_df)
+
         
 
         # Method to be tested
-        mf_hdr_df = cg.prepare_hdr_data(mf_hdr_df, mf_trans_df)
+        mf_hdr_df = cg.prepare_hdr_data(cg.mf_hdr_df, cg.mf_trans_df)
 
         invested_amt_act = round(mf_hdr_df.invested_amt.sum(), 0)
         invested_amt_exp = 8666344.0
