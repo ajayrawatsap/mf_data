@@ -8,6 +8,13 @@
 
 The aim of this project is to calculate number of units required to sell an Equity Mutual Fund so that LTCG (Long-term capital gains) is tax Free. 
 
+Additionally it will also do portfolio analysis to show graphs for below data:
+1. Portfolio summary with aggregate data split for Equity and Debt Funds
+2. Display scheme wise Invested Amount, Current Amount, Gain/Loss
+3. Display taxable unrealised LTCG and STCG 
+4. Display Fund allocation by MF scheme and MF House
+
+
 For Equity Mutual funds the gains up to 100,000 INR is tax free in a Financial Year. To calculate number of units required to sell a MF scheme so that LTCG is tax free is a complicated process which involves multiple factors such as
 1. LTCG is applicable for any Equity MF units sold after one year of its purchase data
 2. LTCG up to 100,000 INR is tax free while above this amount is taxable at 10% 
