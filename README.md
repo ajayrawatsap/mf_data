@@ -11,8 +11,6 @@ The aim of this project is to calculate number of units required to sell an Equi
 Additionally you will also get all your MF transactional data extracted from Common Account Statement (CAS pdf) in csv format for further analysis.
 
 
-
-For Equity Mutual funds the gains up to 100,000 INR is tax free in a financial year. To calculate number of units required to sell a MF scheme so that LTCG is tax free is a complicated process which involves multiple factors such as
 1. LTCG is applicable for any Equity MF units sold after one year of its purchase data
 2. LTCG up to 100,000 INR is tax free for all equity MF combined,  while above this amount it is taxable at 10% 
 3. Grand-Fathered clause, which means if you have an investment before 31-Jan-2018, then cost of acquisition would be  purchase price or NAV on 31-Jan-2018 whichever is higher
