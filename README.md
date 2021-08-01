@@ -116,8 +116,8 @@ This creates new instance of VM unique to your session and only you can see and 
   
 #### Calculations are missing for some schemes  
 For some MF schemes the calculation may not be possible as the Grandfathred NAV could not be found in CSV file. To resolve such issues Manualy maintain the Grand Fathered NAV(for date 31.01.2018)  in [CSV File](data/nav/gf_nav_all.csv)
- #### Why Calculations are also done for Debt Funds  
-  The calculation would also be done for Debt funds and LTCG and STCG will be claculated as per rules.
+ #### Are Calculations are also done for Debt Funds  
+  The calculation would also be done for Debt funds and LTCG and STCG will be calculated as per rules (With threshold of 3 years of LTCG/STCG) 
 #### On Which OS can the tool run
 The tool has been tested in Windows 10 OS with python 3.9, but it should also work in linux/mac environment.  
 
