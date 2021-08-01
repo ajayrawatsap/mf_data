@@ -35,6 +35,12 @@ You can read [about me](https://www.valueresearchonline.com/stories/49239/on-his
 ## Using Tool with Cloud Environment
 **Easy to use as no local installation or set up is required. It is based on [binder](https://mybinder.readthedocs.io/en/latest/about/about.html) sharable cloud virtual machines environments and can be run on web browsers, with required dependencies already installed**
 
+<iframe width="560" height="315"
+src="https://youtu.be/Pkem1vN7rl0" 
+frameborder="0" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+
 
 1. The first step is to get the [consolidated account statement](https://www.camsonline.com/Investors/Statements/Consolidated-Account-Statement) from CAMS in PDF Format. Make sure that you select the option as highlighted in yellow. ![screenshot](https://github.com/ajayrawatsap/mf_data/blob/master/data/assets/cams.PNG)
 2. [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ajayrawatsap/mf_data/HEAD)
