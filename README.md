@@ -108,7 +108,7 @@ This creates new instance of VM unique to your session and only you can see and 
 
 ## FAQ
 #### Does it work for Partial Redemptions
-  It is assuumed that there are no partial redemptions as the calculations can be wrong. This will be supported in future
+  Yes latest version works with partial redemptions. The units redeemded are exhuasted in FIFO principle and adjustments are made
  #### How is Latest NAV and GrandFathered NAV fecthed 
  Latest NAV is fetched from the CAMS statement itself, therefore if you need to have latest calculation use the latest CAMS statement  .
  <br> GrandFathered NAV is fecthed from [AMFI website](https://www.amfiindia.com/nav-history-download)  for date 31-JAN-2018 and list has been parsed and downloaded in [csv file](data/nav/gf_nav_all.csv)
@@ -117,7 +117,7 @@ This creates new instance of VM unique to your session and only you can see and 
 #### Calculations are missing for some schemes  
 For some MF schemes the calculation may not be possible as the Grandfathred NAV could not be found in CSV file. To resolve such issues Manualy maintain the Grand Fathered NAV(for date 31.01.2018)  in [CSV File](data/nav/gf_nav_all.csv)
  #### Why Calculations are also done for Debt Funds  
-  The calculation would also be done for Debt funds but you should ignore it as LTCG for debt funds are calcuated differently. Currently it is not possible to differentiate between Equity and Debt Schemes. In Future only equity funds will be considered
+  The calculation would also be done for Debt funds and LTCG and STCG will be claculated as per rules.
 #### On Which OS can the tool run
 The tool has been tested in Windows 10 OS with python 3.9, but it should also work in linux/mac environment.  
 
