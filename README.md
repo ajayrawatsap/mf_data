@@ -130,6 +130,7 @@ The cloud based application is OS independent and can be run from web browser on
 <br> Read the [binder privacy](https://mybinder.readthedocs.io/en/latest/about/about.html#how-does-mybinder-org-ensure-user-privacy) and [seurity](https://mybinder.readthedocs.io/en/latest/about/about.html#how-secure-is-mybinder-org) information.
 
 ## Feature List for future releases
-1. Analysis of MF portfolio with Graphs and Charts
-2. MF Portfolio evaluation and recommendation on rebalancing portfolio based on performance of schemes.
-3. Personal Finance planner based on user age, profession, risk appetite, existing net worth, goals etc.
+1. Analysis of MF portfolio with Graphs and Charts: Done
+2. Forecast the future portfolio value based on historical values using Machine Learning: In Progress
+3. MF Portfolio evaluation and recommendation on rebalancing portfolio based on performance of schemes.
+4. Personal Finance planner based on user age, profession, risk appetite, existing net worth, goals etc.
