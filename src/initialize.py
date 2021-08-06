@@ -16,7 +16,7 @@ class Logger:
         
         # create file handler for writing to file 
         log_file_path = os.path.join(ct.DATA_DIR, ct.LOGGING_FILE_NAME)
-        file_handler = logging.FileHandler( log_file_path)
+        file_handler = logging.FileHandler( log_file_path, 'w','utf-8')
         file_handler.setLevel(logging.DEBUG)   
 
         # create console handler to print logs on console

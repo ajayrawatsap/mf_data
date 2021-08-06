@@ -33,7 +33,7 @@ def get_hdr_data_to_display(hdr_df_in:pd.DataFrame)->pd.DataFrame:
     hdr_df = hdr_df.drop(columns = ['folio_no', 'isin', 'amc','scheme_code'])
 
 
-    amount_cols = ['invested_amt', 'ltcg', 'stcg', 'current_amt', 'target_ltcg']
+    amount_cols = ['invested_amt', 'ltcg', 'stcg', 'current_amt', 'target_ltcg', 'target_amt']
     hdr_df  = format_amount_cols(hdr_df, amount_cols)
 
 
@@ -218,6 +218,32 @@ def display_equity_vs_debt(mf_totals_grp:pd.DataFrame)->pd.DataFrame:
 
      fig.update_layout(height=700,  legend_tracegroupgap = 50)
      fig.show()
+
+def display_target_units_amt(hdr_df:pd.DataFrame):
+        # Show graph with sorted order of current amount
+        hdr_df = hdr_df.sort_values(by = ['target_amt'], ascending= False)
+
+    
+        scheme_names = [ name.split('Fund')[0].strip() for name in hdr_df.scheme_name.to_list()]
+
+        fig = go.Figure( data = [
+                                go.Bar( name = f"Target Units",
+                                        x =  scheme_names,
+                                        y= hdr_df.target_units.values,                                   
+                                        text = hdr_df.comments.to_list(),
+                                        hovertemplate = "%{text}"
+                                        ),                             
+                                    
+                                ])
+
+        fig.update_layout( 
+                
+                        height=600,
+                        title = 'Mutual Funds Target Units/Amount ',
+                    
+                        )
+        fig.update_yaxes(title_text='Target Units')
+        fig.show() 
 
 
 def display_mf_scheme_amounts(mf_hdr_df:pd.DataFrame)->None:

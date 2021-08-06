@@ -263,43 +263,47 @@ class CapitalGains:
         
         return True
 
-    def calc_units_to_sell(self,scheme_name:str, target_ltcg:float = 100000)->tuple[float, float,str]:
+    def calc_units_to_sell(self,scheme_name:str, target_ltcg:float = 100000)->tuple[float, float,float, str]:
         '''
         Calculate cumilative LTCG and units for a single MF scheme
         Use it to claculate the target units based on input target LTCG    
         '''
         
+        logging.info(f"Calculating Target units amnd Amount for scheme: {scheme_name}")
         ltcg_amt, units_to_sell = 0, 0 
         mf_trans_single_df = self.mf_trans_df[self.mf_trans_df.scheme_name == scheme_name ]    
        
        
         # if transaction exists before  31-Jan-2018 but no GF nav found, no claculation is possible
         if not self.if_gf_nav_ok( mf_trans_single_df ):
-            logging.warning(f'For Scheme {scheme_name}: Transaction prior to 31-Jan-2018 exist but no GrandFathered NAV found')  
+           
             gf_nav_file_name = os.path.join(ct.DATA_DIR, ct.NAV_DIR, ct.GF_NAV_CSV_FILE)
             msg  =  (  f'Transactions prior to 31-Jan-2018 exist but no GrandFathered NAV found:' 
                        f'Manualy Maintain the NAV for  date 31-Jan-2018 in file {gf_nav_file_name }' )
-            return 0, 0, msg
+            logging.warning(msg)  
+            return 0, 0, 0, msg
 
 
 
         mf_trans_single_df = mf_trans_single_df[mf_trans_single_df.ltcg > 0]
         num_rows = mf_trans_single_df.shape[0]
         # No LTCG found return zero
-        if  num_rows == 0:  
-            logging.info(f'For Scheme {scheme_name} No LTCG exists hence calculation is not applicable')  
+        if  num_rows == 0:             
             msg  =  f'No LTCG exists hence calculation is not applicable'   
-            return 0, 0, msg
+            logging.info(msg)  
+            return 0, 0, 0,msg
 
         # Boundray Condition. If the Total Cumlative LTCG(last Transation) is less than Target LTCG return all units
         if mf_trans_single_df.iloc[-1].cumil_ltcg < target_ltcg:  
             units_to_sell = mf_trans_single_df.iloc[-1].cumil_units
             ltcg_amt = mf_trans_single_df.iloc[-1].cumil_ltcg
-            logging.info(f'For Scheme {scheme_name} Total LTCG {ltcg_amt: .2f} is less than target LTCG {target_ltcg}: Sell {units_to_sell:.3f} units for LTCG of {ltcg_amt: .2f}') 
-            msg = ( f'Total LTCG {ltcg_amt: .2f} is less than target LTCG {target_ltcg}: '
-                    f'Sell {units_to_sell:.3f} units for LTCG of {ltcg_amt: .2f}' )
+            target_amt = mf_trans_single_df.iloc[-1].latest_nav *  units_to_sell
+            
+            msg = ( f'Total LTCG {ltcg_amt: ,.2f} is less than target LTCG {target_ltcg:,.2f}: '
+                    f'Sell {units_to_sell:,.3f} units  or {ct.RUPEEE_SYMBOL}{target_amt:,.2f} for LTCG of {ltcg_amt: ,.2f}' )
+            logging.info(msg) 
 
-            return ltcg_amt, units_to_sell, msg
+            return ltcg_amt, units_to_sell,target_amt, msg
         # Calculate using cumilative data
         for i in range(0, num_rows):      
             
@@ -307,7 +311,7 @@ class CapitalGains:
                 
                 if row.cumil_ltcg >= target_ltcg:        
                 # first trasnaction LTCG is greater than Target LTCG use first trsnastion dataa
-                    if i == 0:
+                    if i == 0: 
                         prev_row = row
                     else:
                         prev_row =     mf_trans_single_df.iloc[i-1]
@@ -316,10 +320,11 @@ class CapitalGains:
                     delta_ltcg =   target_ltcg - prev_row.cumil_ltcg
                     delta_units=  delta_ltcg / (row.latest_nav - row.new_purch_nav	)	
                     units_to_sell =   delta_units + prev_row.cumil_units
-                    ltcg_amt =  prev_row.cumil_ltcg +    delta_units *(row.latest_nav - row.new_purch_nav)     
-                    logging.info(f'For Scheme {scheme_name}: Sell {units_to_sell:.3f} units for LTCG of {ltcg_amt: .2f}')  
-                    msg =   f'Sell {units_to_sell:.3f} units for LTCG of {ltcg_amt: .2f}'
-                    return ltcg_amt, round(units_to_sell, 3), msg
+                    target_amt =  row.latest_nav * units_to_sell
+                    ltcg_amt =  prev_row.cumil_ltcg +    delta_units *(row.latest_nav - row.new_purch_nav)                        
+                    msg =   f'Sell {units_to_sell:,.3f} units or {ct.RUPEEE_SYMBOL} {target_amt:,.2f}  for LTCG of {ltcg_amt: ,.2f}'
+                    logging.info(msg) 
+                    return ltcg_amt, round(units_to_sell, 3),  target_amt, msg
 
 
     def calc_redeemed_units(self,scheme_name:str, mf_trans_df:pd.DataFrame)->pd.DataFrame:
@@ -448,14 +453,16 @@ class CapitalGains:
 
         mf_schemes_list = mf_hdr_df.scheme_name.to_list()
         for scheme_name in mf_schemes_list:
-            target_ltcg_sell, target_units, msg  = self.calc_units_to_sell(scheme_name, target_ltcg)
+            target_ltcg_sell, target_units, target_amt, msg  = self.calc_units_to_sell(scheme_name, target_ltcg)
             hdr_dict['scheme_name'].append(scheme_name)
             hdr_dict['target_ltcg'].append(target_ltcg_sell)
             hdr_dict['target_units'].append(target_units)
+            hdr_dict['target_amt'].append(target_amt)
             hdr_dict['comments'].append(msg)
 
 
         mf_hdr_ltcg_df = pd.DataFrame.from_dict(hdr_dict )
+        
 
         #Merge all HDR data to create a single dataframe
         mf_hdr_df_out = pd.merge(mf_hdr_df, mf_trans_grp_df, on ='scheme_name', how = 'left' )
