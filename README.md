@@ -35,6 +35,10 @@ You can read [about me](https://www.valueresearchonline.com/stories/49239/on-his
 ## Using Tool with Cloud Environment
 **Easy to use as no local installation or set up is required. It is based on [binder](https://mybinder.readthedocs.io/en/latest/about/about.html) sharable cloud virtual machines environments and can be run on web browsers, with required dependencies already installed**
 
+A demo of the application on youtube
+<div align="left">
+  <a href="https://www.youtube.com/watch?v=Pkem1vN7rl0"><img src="https://img.youtube.com/vi/Pkem1vN7rl0/0.jpg" alt="IMAGE ALT TEXT"></a>
+</div>
 
 1. The first step is to get the [consolidated account statement](https://www.camsonline.com/Investors/Statements/Consolidated-Account-Statement) from CAMS in PDF Format. Make sure that you select the option as highlighted in yellow. ![screenshot](https://github.com/ajayrawatsap/mf_data/blob/master/data/assets/cams.PNG)
 2. [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ajayrawatsap/mf_data/HEAD)
@@ -104,7 +108,7 @@ This creates new instance of VM unique to your session and only you can see and 
 
 ## FAQ
 #### Does it work for Partial Redemptions
-  It is assuumed that there are no partial redemptions as the calculations can be wrong. This will be supported in future
+  Yes latest version works with partial redemptions. The units redeemded are exhuasted in FIFO principle and adjustments are made
  #### How is Latest NAV and GrandFathered NAV fecthed 
  Latest NAV is fetched from the CAMS statement itself, therefore if you need to have latest calculation use the latest CAMS statement  .
  <br> GrandFathered NAV is fecthed from [AMFI website](https://www.amfiindia.com/nav-history-download)  for date 31-JAN-2018 and list has been parsed and downloaded in [csv file](data/nav/gf_nav_all.csv)
@@ -112,8 +116,8 @@ This creates new instance of VM unique to your session and only you can see and 
   
 #### Calculations are missing for some schemes  
 For some MF schemes the calculation may not be possible as the Grandfathred NAV could not be found in CSV file. To resolve such issues Manualy maintain the Grand Fathered NAV(for date 31.01.2018)  in [CSV File](data/nav/gf_nav_all.csv)
- #### Why Calculations are also done for Debt Funds  
-  The calculation would also be done for Debt funds but you should ignore it as LTCG for debt funds are calcuated differently. Currently it is not possible to differentiate between Equity and Debt Schemes. In Future only equity funds will be considered
+ #### Are Calculations are also done for Debt Funds  
+  The calculation would also be done for Debt funds and LTCG and STCG will be calculated as per rules (With threshold of 3 years of LTCG/STCG) 
 #### On Which OS can the tool run
 The tool has been tested in Windows 10 OS with python 3.9, but it should also work in linux/mac environment.  
 
@@ -126,6 +130,7 @@ The cloud based application is OS independent and can be run from web browser on
 <br> Read the [binder privacy](https://mybinder.readthedocs.io/en/latest/about/about.html#how-does-mybinder-org-ensure-user-privacy) and [seurity](https://mybinder.readthedocs.io/en/latest/about/about.html#how-secure-is-mybinder-org) information.
 
 ## Feature List for future releases
-1. Analysis of MF portfolio with Graphs and Charts
-2. MF Portfolio evaluation and recommendation on rebalancing portfolio based on performance of schemes.
-3. Personal Finance planner based on user age, profession, risk appetite, existing net worth, goals etc.
+1. Analysis of MF portfolio with Graphs and Charts: Done
+2. Forecast the future portfolio value based on historical values using Machine Learning: In Progress
+3. MF Portfolio evaluation and recommendation on rebalancing portfolio based on performance of schemes.
+4. Personal Finance planner based on user age, profession, risk appetite, existing net worth, goals etc.
